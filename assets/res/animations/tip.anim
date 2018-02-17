@@ -1,0 +1,39 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "tip",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.3333333333333333,
+  "sample": 60,
+  "speed": 0.2,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "y": [
+        {
+          "frame": 0,
+          "value": 853,
+          "curve": [
+            0.18,
+            0.89,
+            0.31,
+            1.21
+          ]
+        },
+        {
+          "frame": 0.08333333333333333,
+          "value": 0
+        },
+        {
+          "frame": 0.25,
+          "value": 0
+        },
+        {
+          "frame": 0.3333333333333333,
+          "value": 853
+        }
+      ]
+    }
+  },
+  "events": []
+}
