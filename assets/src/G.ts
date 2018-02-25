@@ -12,11 +12,24 @@ class GlobalInstance {
     }
 
     public returnHall() {
-        cc.director.loadScene("hall");
+        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
+        cc.director.loadScene("hall",()=>{
+            this.gameRoot.hideMaskMessage();
+        });
     }
 
     public enterGobang() {
-        cc.director.loadScene("gobang");
+        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
+        cc.director.loadScene("gobang",()=>{
+            this.gameRoot.hideMaskMessage();
+        });
+    }
+    
+    public enterReversi() {
+        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
+        cc.director.loadScene("reversi",()=>{
+            this.gameRoot.hideMaskMessage();
+        });
     }
 }
 

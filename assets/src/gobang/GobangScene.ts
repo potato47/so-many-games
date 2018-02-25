@@ -22,6 +22,7 @@ export class GobangScene extends cc.Component {
     startGame() {
         this.state = BLACK;
         this.board.reset();
+        G.gameRoot.showTip("你是黑棋你先走");
     }
 
     overGame() {

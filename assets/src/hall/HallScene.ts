@@ -8,4 +8,8 @@ export class HallScene extends cc.Component {
     onBtnGobang() {
         G.enterGobang();
     }
+
+    onBtnReversi() {
+        G.enterReversi();
+    }
 }
