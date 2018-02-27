@@ -49,16 +49,16 @@ export class GobangScene extends cc.Component {
     }
 
     onBoardTouched(coor: cc.Vec2) {
-        let piece = this.board.getPieceByCoor(coor);
-        if (piece.color !== NONE) {
-            G.gameRoot.showTip("这里有子了，你是不是傻");
-            return;
-        }
         switch (this.state) {
             case NONE:
-
-                break;
+            
+            break;
             case BLACK:
+                let piece = this.board.getPieceByCoor(coor);
+                if (piece.color !== NONE) {
+                    G.gameRoot.showTip("这里有子了，你是不是傻");
+                    return;
+                }
                 this.board.placeBlack(coor);
                 if (this.board.judgeWin()) {
                     this.overGame();

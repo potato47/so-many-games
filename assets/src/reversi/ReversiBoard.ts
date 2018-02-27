@@ -66,18 +66,19 @@ export class ReversiBoard extends cc.Component {
         this.placeBlack(cc.v2(Math.floor(this.colsSum / 2), Math.floor(this.rowsSum / 2)));
         this.placeWhite(cc.v2(cc.v2(Math.floor(this.colsSum / 2) - 1, Math.floor(this.rowsSum / 2))));
         this.placeWhite(cc.v2(cc.v2(Math.floor(this.colsSum / 2), Math.floor(this.rowsSum / 2) - 1)));
+
     }
 
     private refresh() {
         this.graphics2.clear();
         for (let x = 0; x < this.colsSum; x++) {
             for (let y = 0; y < this.rowsSum; y++) {
-                if(this.pieceMap[x][y].color === BLACK){
+                if (this.pieceMap[x][y].color === BLACK) {
                     this.graphics2.strokeColor = cc.Color.BLACK;
                     this.graphics2.fillColor = cc.Color.BLACK;
                     this.graphics2.circle(this.startX + x * this.tileWidth + this.tileWidth / 2, this.startY + y * this.tileWidth + this.tileWidth / 2, this.tileWidth * 0.45);
                     this.graphics2.fill();
-                }else if(this.pieceMap[x][y].color === WHITE) {
+                } else if (this.pieceMap[x][y].color === WHITE) {
                     this.graphics2.strokeColor = cc.Color.WHITE;
                     this.graphics2.fillColor = cc.Color.WHITE;
                     this.graphics2.circle(this.startX + x * this.tileWidth + this.tileWidth / 2, this.startY + y * this.tileWidth + this.tileWidth / 2, this.tileWidth * 0.45);
@@ -196,6 +197,17 @@ export class ReversiBoard extends cc.Component {
         this.refresh();
     }
 
+    canPlace(color:number,coor:cc.Vec2):boolean {
+        for (let dir = 1; dir <= 8; dir++) {
+            if (this.judgePass(color, this.getPieceByCoor(coor), dir)) {
+                return true;
+            }
+            if (dir === 8) {
+                return false;
+            }
+        }
+    }
+
     judgeMoveable(stand) {//判断stand是否有可落子的地方
         let tryPiece = null;
         for (let x = 0; x < this.colsSum; x++) {
@@ -214,34 +226,28 @@ export class ReversiBoard extends cc.Component {
     }
 
     judgeWin() {
-        return false;
-        // let selfMoveAble = this.judgeMoveable(this.lastPiece.color);
-        // let oppoMoveAble = this.judgeMoveable(-this.lastPiece.color);
-        // if (selfMoveAble) {
-        //     return false;
-        // } else if (!selfMoveAble && oppoMoveAble) {
-        //     cc.log('can not move next turn');
-        //     G.gameManager.forceChangeTurn();
-        //     G.roomSocket.emit('force change turn');
-        // } else if (!selfMoveAble && !oppoMoveAble) {
-        //     cc.log('both can not move someone win');
-        //     G.gameManager.endGame();
-        // }
+        let selfMoveAble = this.judgeMoveable(this.lastPiece.color);
+        let oppoMoveAble = this.judgeMoveable(-this.lastPiece.color);
+        if (!selfMoveAble && !oppoMoveAble) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     getPieceCount() {
-        let blackPiece = 0;
-        let whitePiece = 0;
+        let blackPieceSum = 0;
+        let whitePieceSum = 0;
         for (let x = 0; x < this.pieceMap.length; x++) {
             for (let y = 0; y < this.pieceMap[x].length; y++) {
                 if (this.pieceMap[x][y].color === BLACK) {
-                    blackPiece++;
+                    blackPieceSum++;
                 } else if (this.pieceMap[x][y].color === WHITE) {
-                    whitePiece++;
+                    whitePieceSum++;
                 }
             }
         }
-        return [blackPiece, whitePiece];
+        return { blackPieceSum, whitePieceSum };
     }
 
     private addListeners() {
