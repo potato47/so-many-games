@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "0105a76f-0f5c-4e57-85c6-d7e9c1b66120",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "公众号二维码": {
+      "ver": "1.0.3",
+      "uuid": "11bd44a6-927d-4f0c-b5aa-5a1da77fd4b1",
+      "rawTextureUuid": "0105a76f-0f5c-4e57-85c6-d7e9c1b66120",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 258,
+      "height": 258,
+      "rawWidth": 258,
+      "rawHeight": 258,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

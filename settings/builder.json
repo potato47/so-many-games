@@ -8,7 +8,7 @@
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
   "jailbreakPlatform": false,
-  "md5Cache": false,
+  "md5Cache": true,
   "mergeStartScene": false,
   "oauthLoginServer": "",
   "optimizeHotUpdate": false,
@@ -23,7 +23,7 @@
   "renderMode": "0",
   "startScene": "0d9c6e0e-87ab-4645-b677-aeb2f9594c3f",
   "title": "so-many-games",
-  "webOrientation": "auto",
+  "webOrientation": "portrait",
   "wechatgame": {
     "appid": "",
     "orientation": "portrait"

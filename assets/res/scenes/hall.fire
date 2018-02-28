@@ -66,16 +66,19 @@
       },
       {
         "__id__": 44
+      },
+      {
+        "__id__": 46
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 46
+        "__id__": 48
       },
       {
-        "__id__": 47
+        "__id__": 49
       }
     ],
     "_prefab": null,
@@ -287,10 +290,8 @@
     "_fontSize": 100,
     "_lineHeight": 100,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "60abd33a-75a4-4ecd-a774-6296a56c2869"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_N$string": "好多游戏",
     "_N$horizontalAlign": 1,
@@ -835,10 +836,8 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "60abd33a-75a4-4ecd-a774-6296a56c2869"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_N$string": "五子棋",
     "_N$horizontalAlign": 1,
@@ -1102,10 +1101,8 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "60abd33a-75a4-4ecd-a774-6296a56c2869"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_N$string": "黑白棋",
     "_N$horizontalAlign": 1,
@@ -1335,7 +1332,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
+      "width": 133.48,
       "height": 60
     },
     "_rotationX": 0,
@@ -1367,10 +1364,8 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "60abd33a-75a4-4ecd-a774-6296a56c2869"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_N$string": "2048",
     "_N$horizontalAlign": 1,
@@ -1642,7 +1637,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "footer",
+    "_name": "webview",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1656,13 +1651,13 @@
       }
     ],
     "_prefab": null,
-    "_id": "34HJ9mVARFrJ99gSdFZGzG",
+    "_id": "8cJXq5bn9LtqSFdn1A5QyJ",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 65,
-      "g": 65,
-      "b": 65,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -1673,7 +1668,71 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 420,
+      "width": 273,
+      "height": 270
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 0.6,
+    "_scaleY": 0.6,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -481
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "cc.WebView",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 44
+    },
+    "_enabled": true,
+    "_useOriginalSize": false,
+    "_url": "http://img.blog.csdn.net/20180224184952193?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcG90YXRvNDc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70",
+    "webviewEvents": []
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "footer",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 47
+      }
+    ],
+    "_prefab": null,
+    "_id": "34HJ9mVARFrJ99gSdFZGzG",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 428.93,
       "height": 40
     },
     "_rotationX": 0,
@@ -1697,7 +1756,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 44
+      "__id__": 46
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -1705,12 +1764,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "60abd33a-75a4-4ecd-a774-6296a56c2869"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "公众号搜索:新手程序员",
+    "_N$string": "按住我                 请用力",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",

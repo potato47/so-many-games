@@ -22,7 +22,7 @@ export class LodingScene extends cc.Component {
 
     protected start() {
         cc.director.setDisplayStats(false);
-        let tip = "假装在加载很多东西。。。"
+        let tip = "始终相信美好的事情不会发生"
         let i = 0;
         this.tipLabel.string = '';
         this.schedule(()=>{
