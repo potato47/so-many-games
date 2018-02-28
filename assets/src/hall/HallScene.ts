@@ -12,4 +12,8 @@ export class HallScene extends cc.Component {
     onBtnReversi() {
         G.enterReversi();
     }
+
+    onBtn2048() {
+        G.enter2048();
+    }
 }

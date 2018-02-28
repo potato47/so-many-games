@@ -31,6 +31,13 @@ class GlobalInstance {
             this.gameRoot.hideMaskMessage();
         });
     }
+
+    public enter2048() {
+        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
+        cc.director.loadScene("2048",()=>{
+            this.gameRoot.hideMaskMessage();
+        });
+    }
 }
 
 export const G = GlobalInstance.Instance;
