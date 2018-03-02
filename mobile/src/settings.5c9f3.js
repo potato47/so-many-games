@@ -1,5 +1,5 @@
 window._CCSettings = {
-    platform: "web-desktop",
+    platform: "web-mobile",
     groupList: [
         "default"
     ],
@@ -82,8 +82,9 @@ window._CCSettings = {
             2,
             3
         ],
-        "0702ed13": [
+        "0629afa22": [
             1,
+            "30RpVnDRRGpb5Qf/sQlnIv",
             2,
             3,
             "e8WbTgyiRHC51Pr1bvX6Oe"
@@ -110,7 +111,7 @@ window._CCSettings = {
             3
         ]
     },
-    orientation: "portrait",
+    orientation: "",
     uuids: [
         "04pOBcxcNN4ItwvVI9w3ae",
         "25mUoCgM1DX6AX9srx0UWQ",
@@ -122,8 +123,8 @@ window._CCSettings = {
     ],
     "md5AssetsMap": {
         "03/03f7ca26f.json": "f6b17",
-        "07/0702ed13.json": "18d71",
-        "0b/0b1bf8e52.json": "29385",
+        "06/0629afa22.json": "cbf42",
+        "0b/0b1bf8e52.json": "10f0e",
         "0b/0b7146e97.json": "5b010",
         "0c/0c49ae998.json": "7dd27",
         "assets/res/textures/bg.jpg": "e7b3b",
