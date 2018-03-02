@@ -22,10 +22,13 @@
       },
       {
         "__id__": 3
+      },
+      {
+        "__id__": 4
       }
     ],
     "_prefab": {
-      "__id__": 4
+      "__id__": 5
     },
     "_id": "",
     "_opacity": 255,
@@ -70,7 +73,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "_fadeTime": 1,
     "_minSeg": 1,
     "_stroke": 64,
@@ -95,8 +98,36 @@
       "__id__": 1
     },
     "_enabled": true,
-    "label": null,
-    "text": "hello"
+    "g": {
+      "__id__": 4
+    }
+  },
+  {
+    "__type__": "cc.Graphics",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_lineWidth": 5,
+    "_strokeColor": {
+      "__type__": "cc.Color",
+      "r": 217,
+      "g": 27,
+      "b": 27,
+      "a": 255
+    },
+    "_lineJoin": 2,
+    "_lineCap": 0,
+    "_fillColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_miterLimit": 10
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -104,7 +135,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "30469567-0d14-46a5-be50-7ffb1096722f"
     },
     "fileId": "f1HTTsZ6RNY64u5xuFLkfF",
     "sync": false

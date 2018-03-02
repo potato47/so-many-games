@@ -5,37 +5,56 @@ class GlobalInstance {
     public static readonly Instance:GlobalInstance = new GlobalInstance();
     public gameRoot:GameRoot = null;
 
-    private constructor(){}
+    private constructor(){
+    }
 
     public enterHall() {
         cc.director.loadScene("hall");
     }
 
     public returnHall() {
-        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
-        cc.director.loadScene("hall",()=>{
-            this.gameRoot.hideMaskMessage();
-        });
+        cc.director.loadScene("hall");
     }
 
     public enterGobang() {
-        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
-        cc.director.loadScene("gobang",()=>{
-            this.gameRoot.hideMaskMessage();
-        });
+        this.loadSceneWithProgress("gobang");
     }
     
     public enterReversi() {
-        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
-        cc.director.loadScene("reversi",()=>{
-            this.gameRoot.hideMaskMessage();
-        });
+        this.loadSceneWithProgress("reversi");
     }
 
     public enter2048() {
-        this.gameRoot.showMaskMessage("命里有时终须有\n命里无时莫强求");
-        cc.director.loadScene("2048",()=>{
-            this.gameRoot.hideMaskMessage();
+        this.loadSceneWithProgress("2048");
+    }
+
+    private setLoadingDisplay () {
+        if(cc.sys.isNative){
+            return;
+        }
+        // Loading splash scene
+        let splash = document.getElementById('splash');
+        let progressBar = splash.querySelector('.progress-bar span');
+        (cc.loader as any).onProgress = function (completedCount, totalCount, item) {
+            let percent = 100 * completedCount / totalCount;
+            if (progressBar) {
+                (progressBar as any).style.width = percent.toFixed(2) + '%';
+            }
+        };
+        splash.style.display = 'block';
+        (progressBar as any).style.width = '0%';
+
+        cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
+            splash.style.display = 'none';
+        });
+    }
+
+    private loadSceneWithProgress(scene:string,cb?:Function){
+        this.setLoadingDisplay();
+        cc.director.preloadScene(scene,()=>{
+            setTimeout(()=>{
+                cc.director.loadScene(scene,cb);
+            },1000);
         });
     }
 }

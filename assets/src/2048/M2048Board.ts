@@ -109,16 +109,18 @@ export class M2048Board extends cc.Component {
         return true;
     }
 
-    getMaxN(): number {
+    getMaxNLabel(): string {
         let max = 2;
+        let str = "2";
         for (let x = 0; x < this.colsSum; x++) {
             for (let y = 0; y < this.rowsSum; y++) {
                 if (this.pieceMap[x][y].n > max) {
                     max = this.pieceMap[x][y].n;
+                    str = this.pieceMap[x][y].nLabel.string;
                 }
             }
         }
-        return max;
+        return str;
     }
 
     slideLeft(): boolean {

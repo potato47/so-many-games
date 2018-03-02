@@ -1332,7 +1332,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 133.48,
+      "width": 422.4,
       "height": 60
     },
     "_rotationX": 0,
@@ -1367,7 +1367,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "2048",
+    "_N$string": "2048 | 程序员版",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -1668,7 +1668,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 273,
+      "width": 270,
       "height": 270
     },
     "_rotationX": 0,
@@ -1696,7 +1696,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_url": "http://img.blog.csdn.net/20180224184952193?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcG90YXRvNDc=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70",
+    "_url": "https://mmbiz.qpic.cn/mmbiz_jpg/iaV7GkTHVPDt2Pq6sgR6dNDGf4Shh8mfDggfQZpC434F2oaMUV8pF4ljNanKVnXsjpFOM7IMcC5mEH5VY4kc24A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1",
     "webviewEvents": []
   },
   {
