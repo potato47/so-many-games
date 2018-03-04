@@ -28,6 +28,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("2048");
     }
 
+    public enterJump() {
+        this.loadSceneWithProgress("jump");
+    }
+
     private setLoadingDisplay () {
         if(cc.sys.isNative){
             return;

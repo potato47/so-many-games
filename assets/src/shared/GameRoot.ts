@@ -26,7 +26,9 @@ export class GameRoot extends cc.Component {
             this.messageBtn1.getComponent(cc.Label).string = btn1.label;
             this.messageBtn1.once(cc.Node.EventType.TOUCH_END,()=>{
                 this.hideMaskMessage();
-                btn1.cb || btn1.cb();
+                if(btn1.cb) {
+                    btn1.cb();
+                }
             },btn1.target);
         }else{
             this.messageBtn1.active = false;
@@ -36,7 +38,9 @@ export class GameRoot extends cc.Component {
             this.messageBtn2.getComponent(cc.Label).string = btn2.label;
             this.messageBtn2.once(cc.Node.EventType.TOUCH_END,()=>{
                 this.hideMaskMessage();
-                btn2.cb || btn2.cb();
+                if(btn2.cb){
+                    btn2.cb();
+                }
             },btn2.target);
         }else{
             this.messageBtn2.active = false;

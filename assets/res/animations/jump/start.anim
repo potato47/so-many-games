@@ -1,0 +1,549 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "start",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.3333333333333333,
+  "sample": 60,
+  "speed": 0.05,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "ground/player": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                90,
+                1000
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.08333333333333333,
+              "value": [
+                90,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": [
+                90,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.25,
+              "value": [
+                20,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.4166666666666667,
+              "value": [
+                20,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.43333333333333335,
+              "value": [
+                85,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.45,
+              "value": [
+                150,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.4666666666666667,
+              "value": [
+                214,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.48333333333333334,
+              "value": [
+                279,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                344,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                344,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6,
+              "value": [
+                279,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6166666666666667,
+              "value": [
+                214,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6333333333333333,
+              "value": [
+                150,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.65,
+              "value": [
+                85,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": [
+                20,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.75,
+              "value": [
+                20,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.7666666666666667,
+              "value": [
+                85,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.7833333333333333,
+              "value": [
+                150,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.8,
+              "value": [
+                214,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.8166666666666667,
+              "value": [
+                279,
+                20
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                344,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.9166666666666666,
+              "value": [
+                344,
+                0
+              ],
+              "motionPath": [
+                [
+                  216,
+                  69,
+                  282,
+                  69,
+                  155,
+                  69
+                ]
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                90,
+                0
+              ],
+              "motionPath": []
+            }
+          ]
+        }
+      },
+      "ground/princess": {
+        "props": {
+          "position": [
+            {
+              "frame": 0.08333333333333333,
+              "value": [
+                343,
+                1000
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": [
+                343,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.25,
+              "value": [
+                343,
+                0
+              ],
+              "curve": "linear",
+              "motionPath": []
+            },
+            {
+              "frame": 0.26666666666666666,
+              "value": [
+                307,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.2833333333333333,
+              "value": [
+                271,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.3,
+              "value": [
+                234,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.31666666666666665,
+              "value": [
+                198,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": [
+                163,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.4166666666666667,
+              "value": [
+                163,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.43333333333333335,
+              "value": [
+                227,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.45,
+              "value": [
+                290,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.4666666666666667,
+              "value": [
+                354,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.48333333333333334,
+              "value": [
+                417,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.5,
+              "value": [
+                481,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.5833333333333334,
+              "value": [
+                481,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6,
+              "value": [
+                417,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6166666666666667,
+              "value": [
+                354,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6333333333333333,
+              "value": [
+                290,
+                40
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.65,
+              "value": [
+                227,
+                30
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.6666666666666666,
+              "value": [
+                163,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 0.75,
+              "value": [
+                163,
+                0
+              ],
+              "motionPath": [
+                [
+                  292,
+                  45,
+                  224,
+                  45,
+                  318,
+                  45
+                ],
+                [
+                  350,
+                  39,
+                  334,
+                  42,
+                  363,
+                  38
+                ],
+                [
+                  393,
+                  34,
+                  376,
+                  34,
+                  426,
+                  34
+                ]
+              ]
+            },
+            {
+              "frame": 0.8333333333333334,
+              "value": [
+                481,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1.0833333333333333,
+              "value": [
+                481,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1.25,
+              "value": [
+                481,
+                0
+              ],
+              "motionPath": [
+                [
+                  730,
+                  134,
+                  608,
+                  134,
+                  858,
+                  134
+                ]
+              ]
+            },
+            {
+              "frame": 1.3333333333333333,
+              "value": [
+                980,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1.3333333333333333,
+              "value": [
+                980,
+                0
+              ]
+            }
+          ],
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 1.3333333333333333,
+              "value": false
+            },
+            {
+              "frame": 1.3333333333333333,
+              "value": false
+            }
+          ]
+        }
+      },
+      "ground/badboy": {
+        "props": {
+          "position": [
+            {
+              "frame": 1,
+              "value": [
+                400,
+                1000
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1.0833333333333333,
+              "value": [
+                400,
+                1000
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1.1666666666666667,
+              "value": [
+                400,
+                0
+              ],
+              "motionPath": []
+            },
+            {
+              "frame": 1.25,
+              "value": [
+                400,
+                0
+              ],
+              "motionPath": [
+                [
+                  652,
+                  150,
+                  527,
+                  150,
+                  777,
+                  150
+                ]
+              ]
+            },
+            {
+              "frame": 1.3333333333333333,
+              "value": [
+                900,
+                0
+              ],
+              "motionPath": []
+            }
+          ],
+          "active": [
+            {
+              "frame": 1,
+              "value": true
+            },
+            {
+              "frame": 1.3333333333333333,
+              "value": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}
