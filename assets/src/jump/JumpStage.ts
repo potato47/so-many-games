@@ -50,6 +50,7 @@ export class Stage extends cc.Component {
     }
 
     public showStartStory(cb, cbTarget) {
+        this.g.clear();
         this.drawBlock(new Block(0, 5));
         this.drawBlock(new Block(9, 5));
         let anim = this.getComponent(cc.Animation);
@@ -86,7 +87,6 @@ export class Stage extends cc.Component {
             this.player.jumpTo(far, cb, cbTarget);
         }, 25);
 
-
     }
 
     public reset() {
@@ -103,7 +103,8 @@ export class Stage extends cc.Component {
     }
 
     private drawBlock(block: Block) {
-        this.g.fillRect(block.head * this.gridWidth, - this.gridWidth, this.gridWidth * block.length);
+        this.g.rect(block.head * this.gridWidth, - this.gridWidth, this.gridWidth * block.length,this.gridWidth);
+        this.g.fill();
     }
 
     public addNewBlock() {
@@ -143,8 +144,8 @@ export class Stage extends cc.Component {
         this.animState.speed = 4;
     }
 
-    public playerDie(cb,cbTarget) {
-        let action = cc.sequence(cc.moveBy(1,0,-1000),cc.callFunc(cb,cbTarget));
+    public playerDie(cb, cbTarget) {
+        let action = cc.sequence(cc.moveBy(1, 0, -1000), cc.callFunc(cb, cbTarget));
         this.player.node.runAction(action);
     }
 
