@@ -16,7 +16,7 @@ export class JumpScene extends cc.Component {
     @property(cc.Node)
     private ignoreStoryButton: cc.Node = null;
 
-    private state: STATE = STATE.NONE;
+    public state: STATE = STATE.NONE;
 
     start() {
         this.addListeners();
@@ -40,7 +40,7 @@ export class JumpScene extends cc.Component {
             this.progress.hide();
             this.state = STATE.OVER;
             this.stage.endGame(()=>{
-                G.gameRoot.showMaskMessage("原来我不是主角",
+                G.gameRoot.showMaskMessage("原来我不是男主",
                 {
                     label: "打扰了", cb: () => {
                         G.returnHall();
@@ -76,6 +76,7 @@ export class JumpScene extends cc.Component {
         if (this.state === STATE.START) {
             this.stage.playerJump((playerIndex: number, needNewBlock: boolean) => {
                 if (playerIndex === -1) {
+                    this.state = STATE.NONE;
                     this.stage.playerDie(()=>{
                         this.overGame(false);
                     },this);
