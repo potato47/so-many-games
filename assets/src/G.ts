@@ -32,6 +32,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("jump");
     }
 
+    public enterPuzzle() {
+        this.loadSceneWithProgress("puzzle");
+    }
+
     private setLoadingDisplay () {
         if(cc.sys.isNative){
             return;
