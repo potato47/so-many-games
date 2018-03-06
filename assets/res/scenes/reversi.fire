@@ -588,8 +588,10 @@
     "_fontSize": 100,
     "_lineHeight": 100,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "黑白棋",
     "_N$horizontalAlign": 1,
@@ -665,8 +667,10 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "重新开始",
     "_N$horizontalAlign": 1,
@@ -807,8 +811,10 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "返回大厅",
     "_N$horizontalAlign": 1,
@@ -1005,8 +1011,10 @@
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "黑",
     "_N$horizontalAlign": 1,
@@ -1047,7 +1055,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 22.25,
+      "width": 23.44,
       "height": 40
     },
     "_rotationX": 0,
@@ -1079,8 +1087,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,
@@ -1238,8 +1248,10 @@
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "白",
     "_N$horizontalAlign": 1,
@@ -1280,7 +1292,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 22.25,
+      "width": 23.44,
       "height": 40
     },
     "_rotationX": 0,
@@ -1312,8 +1324,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "0",
     "_N$horizontalAlign": 1,

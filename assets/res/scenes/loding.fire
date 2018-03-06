@@ -252,7 +252,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 140.1,
+      "width": 125.28,
       "height": 40
     },
     "_rotationX": 0,
@@ -284,8 +284,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "loding...",
     "_N$horizontalAlign": 1,
@@ -632,8 +634,10 @@
     "_fontSize": 80,
     "_lineHeight": 100,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "命里有时终须有\n命里无时莫强求",
     "_N$horizontalAlign": 1,
@@ -768,8 +772,10 @@
     "_fontSize": 80,
     "_lineHeight": 80,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "确定",
     "_N$horizontalAlign": 1,
@@ -897,8 +903,10 @@
     "_fontSize": 80,
     "_lineHeight": 80,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "确定",
     "_N$horizontalAlign": 1,
@@ -1220,8 +1228,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "这是一条短消息",
     "_N$horizontalAlign": 1,

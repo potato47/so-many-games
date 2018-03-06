@@ -25,7 +25,7 @@ export class M2048Scene extends cc.Component {
     overGame() {
         let max = this.board.getMaxNLabel();
         G.gameRoot.showMaskMessage(max,
-            { label: "朕知道了", cb: () => { }, target: this });
+            { label: "OK", cb: () => { }, target: this });
         this.state = STATE.OVER;
     }
 

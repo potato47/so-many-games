@@ -72,12 +72,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 44,
+    "_actualFontSize": 38,
     "_fontSize": 50,
     "_lineHeight": 50,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "2048",
     "_N$horizontalAlign": 1,

@@ -11,8 +11,11 @@ export class Piece extends cc.Component {
     public curCol: number;
     public curRow: number;
     public isBlank: boolean;
+    public get isRight() {
+        return this.curCol === this.oriCol && this.curRow === this.oriRow;
+    }
 
-    public init(col: number, row: number, colNum: number, colWidth:number) {
+    public init(col: number, row: number, colNum: number, colWidth: number) {
         this.oriCol = col;
         this.oriRow = row;
         this.curCol = col;
@@ -32,7 +35,7 @@ export class Piece extends cc.Component {
         this.node.height = colWidth;
 
         this.isBlank = this.oriCol === colNum - 1 && this.oriRow === 0;
-        if(this.isBlank) {
+        if (this.isBlank) {
             this.node.active = false;
         }
     }

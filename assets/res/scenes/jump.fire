@@ -573,8 +573,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "女主",
     "_N$horizontalAlign": 1,
@@ -903,8 +905,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "男主",
     "_N$horizontalAlign": 1,
@@ -1233,8 +1237,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "",
     "_N$horizontalAlign": 1,
@@ -2101,8 +2107,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "坏人",
     "_N$horizontalAlign": 1,
@@ -2431,8 +2439,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "女主",
     "_N$horizontalAlign": 1,
@@ -2761,8 +2771,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "男主",
     "_N$horizontalAlign": 1,
@@ -2997,8 +3009,10 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "跳过剧情",
     "_N$horizontalAlign": 1,

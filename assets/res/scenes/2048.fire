@@ -490,7 +490,7 @@
     "_prefab": {
       "__id__": 13
     },
-    "_id": "7fVK4EVXRB9qJl+7vPXo0E",
+    "_id": "644hs6K2lL8Yy8Uy25bU1j",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -592,7 +592,7 @@
     "_prefab": {
       "__id__": 17
     },
-    "_id": "c87I3KfRVJ+74UyOEJ22Vr",
+    "_id": "44zkF6iaZA07yn2vYP4ABb",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -694,7 +694,7 @@
     "_prefab": {
       "__id__": 21
     },
-    "_id": "14F7BmY1ZGpIbTPEmNDcpo",
+    "_id": "052Y0ciRhKuajCGLeIkU5J",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -796,7 +796,7 @@
     "_prefab": {
       "__id__": 25
     },
-    "_id": "86Uuk2ge5BvLBcSApcPM3S",
+    "_id": "d3tXq5UZBCers3zM9o61gj",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -898,7 +898,7 @@
     "_prefab": {
       "__id__": 29
     },
-    "_id": "d77ilZRU9KIb++UfgTLS6O",
+    "_id": "d3aLe8PJhPza18LiBfPzvv",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1000,7 +1000,7 @@
     "_prefab": {
       "__id__": 33
     },
-    "_id": "24a7nmUatOUrZAvQrwR132",
+    "_id": "803DXi0UpENK54FL6iDdMv",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1102,7 +1102,7 @@
     "_prefab": {
       "__id__": 37
     },
-    "_id": "feEXz3NTZKRp25zvrYMggW",
+    "_id": "ffqXYgwW1DiZEG/n+onujm",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1204,7 +1204,7 @@
     "_prefab": {
       "__id__": 41
     },
-    "_id": "c0gBu1VrRNVbaallzqqqxZ",
+    "_id": "01IEU8mkFG/oJxa9w8CXWJ",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1306,7 +1306,7 @@
     "_prefab": {
       "__id__": 45
     },
-    "_id": "1435Ba0y5IJqADbIAnhFEV",
+    "_id": "e4RjGnTEVP5YUyuSfQcp8D",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1408,7 +1408,7 @@
     "_prefab": {
       "__id__": 49
     },
-    "_id": "9fYNC3X8pI7IAuoxcPxVeV",
+    "_id": "eaHyvh0mtAyrxo+NseWu9B",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1510,7 +1510,7 @@
     "_prefab": {
       "__id__": 53
     },
-    "_id": "f8CC/t2CpFaLqHXay/FC6C",
+    "_id": "caSISYYoRGaooLIJ4+by7B",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1612,7 +1612,7 @@
     "_prefab": {
       "__id__": 57
     },
-    "_id": "47OTPKvklMQJjLE0aKqpnA",
+    "_id": "a2qogRuO1B95TXxqMrjfsC",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1714,7 +1714,7 @@
     "_prefab": {
       "__id__": 61
     },
-    "_id": "d2rg9p2KNEP4XR0tj1i2Uv",
+    "_id": "2aXP6CcohJj42zQmK7z0cR",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1816,7 +1816,7 @@
     "_prefab": {
       "__id__": 65
     },
-    "_id": "51xQrQGGFCgrqZNvFvCwg+",
+    "_id": "7a8tP6h2lLKZILdGGLVKfv",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -1918,7 +1918,7 @@
     "_prefab": {
       "__id__": 69
     },
-    "_id": "8bm6L7zWFCAqkWOOzd4Cm4",
+    "_id": "abTW9qTEpDn5/Ow6fY5MQu",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -2020,7 +2020,7 @@
     "_prefab": {
       "__id__": 73
     },
-    "_id": "e8F08UTh5L/6Jc5BEe0riM",
+    "_id": "60LZ2oyyZNAbcHIVo+2Kbr",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -2238,8 +2238,10 @@
     "_fontSize": 100,
     "_lineHeight": 100,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "这一生",
     "_N$horizontalAlign": 1,
@@ -2315,8 +2317,10 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "重新开始",
     "_N$horizontalAlign": 1,
@@ -2457,8 +2461,10 @@
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "返回大厅",
     "_N$horizontalAlign": 1,

@@ -290,8 +290,10 @@
     "_fontSize": 100,
     "_lineHeight": 100,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "好多游戏",
     "_N$horizontalAlign": 1,
@@ -810,8 +812,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 180,
-      "height": 60
+      "width": 150,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -838,12 +840,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 60,
-    "_fontSize": 60,
-    "_lineHeight": 60,
+    "_actualFontSize": 50,
+    "_fontSize": 50,
+    "_lineHeight": 50,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "五子棋",
     "_N$horizontalAlign": 1,
@@ -1075,8 +1079,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 180,
-      "height": 60
+      "width": 150,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1103,12 +1107,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 60,
-    "_fontSize": 60,
-    "_lineHeight": 60,
+    "_actualFontSize": 50,
+    "_fontSize": 50,
+    "_lineHeight": 50,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "黑白棋",
     "_N$horizontalAlign": 1,
@@ -1338,8 +1344,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 422.4,
-      "height": 60
+      "width": 390.26,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1366,12 +1372,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 60,
-    "_fontSize": 60,
-    "_lineHeight": 60,
+    "_actualFontSize": 50,
+    "_fontSize": 50,
+    "_lineHeight": 0,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "2048 | 程序员版",
     "_N$horizontalAlign": 1,
@@ -1601,8 +1609,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 408.93,
-      "height": 60
+      "width": 360.01,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1629,12 +1637,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 60,
-    "_fontSize": 60,
-    "_lineHeight": 60,
+    "_actualFontSize": 50,
+    "_fontSize": 50,
+    "_lineHeight": 50,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "跳一跳 | 言情版",
     "_N$horizontalAlign": 1,
@@ -1864,8 +1874,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 468.93,
-      "height": 60
+      "width": 410.01,
+      "height": 50
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1892,12 +1902,14 @@
     },
     "_enabled": true,
     "_useOriginalSize": false,
-    "_actualFontSize": 60,
-    "_fontSize": 60,
-    "_lineHeight": 60,
+    "_actualFontSize": 50,
+    "_fontSize": 50,
+    "_lineHeight": 50,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "拼图 | 新垣结衣版",
     "_N$horizontalAlign": 1,
@@ -2264,7 +2276,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 428.93,
+      "width": 420,
       "height": 40
     },
     "_rotationX": 0,
@@ -2296,10 +2308,12 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "c6e87de6-c9df-4ae7-b9db-3812d622863f"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
-    "_N$string": "按住我                 请用力",
+    "_N$string": "按住我         请用力",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
