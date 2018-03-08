@@ -25,4 +25,8 @@ export class HallScene extends cc.Component {
         G.enterPuzzle();
     }
 
+    onBtnGet47() {
+        G.enterGet47();
+    }
+
 }

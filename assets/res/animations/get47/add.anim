@@ -1,0 +1,44 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "add",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.16666666666666666,
+  "sample": 60,
+  "speed": 0.3,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {},
+    "paths": {
+      "add": {
+        "props": {
+          "y": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "sineOut"
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 121
+            }
+          ],
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": false
+            }
+          ]
+        }
+      },
+      "minus": {
+        "props": {}
+      }
+    }
+  },
+  "events": []
+}

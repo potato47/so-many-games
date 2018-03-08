@@ -24,13 +24,15 @@ export class Get47Board extends cc.Component {
     private runningAction: boolean = false;
     private score: number = 0;
 
+    private inputDir: number = 0; // 手机倾斜方向，1向右分数相加，-1向左分数相减
+
     public init(get47Scene: Get47Scene) {
         this.get47Scene = get47Scene;
         this.pieceWidth = (this.node.width - this.padding * 2 - this.spacing * (this.colsNum - 1)) / this.colsNum;
-        this.reset();
     }
 
     public reset() {
+        this.node.removeAllChildren();
         this.pieceMap = [];
         for (let x = 0; x < this.colsNum; x++) {
             this.pieceMap[x] = [];
@@ -42,7 +44,7 @@ export class Get47Board extends cc.Component {
                 pieceNode.position = cc.p(this.padding + x * (this.pieceWidth + this.spacing),
                     this.padding + y * (this.pieceWidth + this.spacing));
                 let piece = pieceNode.getComponent(Piece);
-                piece.init(x, y)
+                piece.init(x, y);
                 this.addTouchEvent(piece);
                 this.pieceMap[x][y] = piece;
             }
@@ -51,7 +53,10 @@ export class Get47Board extends cc.Component {
     }
 
     private addTouchEvent(piece: Piece) {
-        piece.node.on(cc.Node.EventType.TOUCH_END, (e: cc.Event.EventTouch) => {
+        let f = (e: cc.Event.EventTouch) => {
+            if (this.runningAction) {
+                return;
+            }
             let p1 = e.getStartLocation();
             let p2 = e.getLocation();
             let dir: DIR;
@@ -68,8 +73,11 @@ export class Get47Board extends cc.Component {
                     dir = DIR.DOWN;
                 }
             }
+            this.inputDir = 0;
             this.get47Scene.onPieceTouch(piece, dir);
-        }, this);
+        };
+        piece.node.on(cc.Node.EventType.TOUCH_END, f, this);
+        piece.node.on(cc.Node.EventType.TOUCH_CANCEL, f, this);
 
     }
 
@@ -78,6 +86,7 @@ export class Get47Board extends cc.Component {
         if (neighborPiece === null) {
             return;
         }
+        this.runningAction = true;
 
         this.exchangeTwoPiecesState(piece, neighborPiece);
         let hLines = this.getHorizontalLines();
@@ -87,18 +96,20 @@ export class Get47Board extends cc.Component {
             let finished = 0;
             let total = 2;
             let self = this;
-            let action1 = cc.sequence(cc.moveTo(0.15, piece.pos),
+            let action1 = cc.sequence(cc.moveTo(0.15, piece.posIndex),
                 cc.callFunc(() => {
                     finished++;
                     if (finished === total) {
+                        this.runningAction = false;
                         this.deletePieces();
                     }
                 })
             );
-            let action2 = cc.sequence(cc.moveTo(0.15, neighborPiece.pos),
+            let action2 = cc.sequence(cc.moveTo(0.15, neighborPiece.posIndex),
                 cc.callFunc(() => {
                     finished++;
                     if (finished === total) {
+                        this.runningAction = false;
                         this.deletePieces();
                     }
                 })
@@ -131,19 +142,21 @@ export class Get47Board extends cc.Component {
             neighborPiece.node.runAction(action2);
         }
 
-
     }
 
     private exchangeTwoPiecesState(piece1: Piece, piece2: Piece) {
-        [this.pieceMap[piece1.x][piece1.y], this.pieceMap[piece2.x][piece2.y]] =
-            [this.pieceMap[piece2.x][piece2.y], this.pieceMap[piece1.x][piece1.y]]
+        this.pieceMap[piece1.x][piece1.y] = piece2;
+        this.pieceMap[piece2.x][piece2.y] = piece1;
+        [piece1.x, piece2.x] = [piece2.x, piece1.x];
+        [piece1.y, piece2.y] = [piece2.y, piece1.y];
     }
 
     private exchangeTwoPiecesPosIndex(piece1: Piece, piece2: Piece) {//交换位置信息，实际位置没有改变
-        [piece1.pos, piece2.pos] = [piece2.pos, piece1.pos]
+        [piece1.posIndex, piece2.posIndex] = [piece2.posIndex, piece1.posIndex]
     }
 
     private deletePieces() {
+        this.runningAction = true;
         let hLines = this.getHorizontalLines();
         let vLines = this.getVerticalLines();
         if (hLines.length + vLines.length === 0) {
@@ -152,25 +165,26 @@ export class Get47Board extends cc.Component {
         }
         let addNumber = 0;//横加竖减
         let minusNumber = 0;
-        let lines:Array<Piece> = [];
+        let lines: Array<Piece> = [];
         for (let piece of hLines) {
             addNumber += piece.type;
             lines.push(piece);
         }
         for (let vPiece of vLines) {
             minusNumber += vPiece.type;
-            let isExist = false;
-            for (let hPiece of hLines) {
-                if (hPiece === vPiece) {
-                    isExist = true;
-                }
-            }
-            if (!isExist) {
+            if (lines.indexOf(vPiece) === -1) {
                 lines.push(vPiece);
             }
         }
-
-        this.score += (addNumber - minusNumber);
+        // TODO:
+        if (this.inputDir > 0) {
+            this.get47Scene.updateScore(addNumber + minusNumber);
+        } else if (this.inputDir < 0) {
+            this.get47Scene.updateScore(-addNumber - minusNumber);
+        } else {
+            this.get47Scene.updateScore(addNumber - minusNumber);
+        }
+        // this.score += (addNumber - minusNumber);
 
         let finished = 0;
         let total = lines.length;
@@ -179,7 +193,8 @@ export class Get47Board extends cc.Component {
                 cc.callFunc(() => {
                     finished++;
                     if (finished === total) {
-                        this.fallTiles();
+                        this.runningAction = false;
+                        this.fallPieces();
                     }
                 })
             );
@@ -188,7 +203,8 @@ export class Get47Board extends cc.Component {
         }
     }
 
-    private fallTiles() {
+    private fallPieces() {
+        this.runningAction = true;
         //下落
         let isAllFall = false;
         while (!isAllFall) {
@@ -206,7 +222,7 @@ export class Get47Board extends cc.Component {
         let fallingPieces: Array<Piece> = [];
         for (let x = 0; x < this.colsNum; x++) {
             for (let y = 0; y < this.rowsNum; y++) {
-                if (this.pieceMap[x][y].pos !== this.pieceMap[x][y].node.position) {
+                if (this.pieceMap[x][y].posIndex !== this.pieceMap[x][y].node.position) {
                     fallingPieces.push(this.pieceMap[x][y]);
                 }
             }
@@ -215,10 +231,11 @@ export class Get47Board extends cc.Component {
         let finished = 0;
         let total = fallingPieces.length;
         for (let i = 0; i < total; i++) {
-            let action = cc.sequence(cc.moveTo(0.3, fallingPieces[i].pos),
+            let action = cc.sequence(cc.moveTo(0.3, fallingPieces[i].posIndex),
                 cc.callFunc(() => {
                     finished++;
                     if (finished == total) {
+                        this.runningAction = false;
                         this.addPieces();
                     }
                 })
@@ -229,6 +246,7 @@ export class Get47Board extends cc.Component {
     }
 
     private addPieces() {
+        this.runningAction = true;
         //填补空白
         let addingPieces: Array<Piece> = [];
         for (let y = 0; y < this.rowsNum; y++) {
@@ -246,6 +264,7 @@ export class Get47Board extends cc.Component {
                 cc.callFunc(() => {
                     finished++;
                     if (finished == total) {
+                        this.runningAction = false;
                         this.deletePieces();
                     }
                 })
@@ -256,7 +275,7 @@ export class Get47Board extends cc.Component {
         }
     }
 
-    private getVerticalLines():Array<Piece> {
+    private getVerticalLines(): Array<Piece> {
         let linePieces: Array<Piece> = [];
         let count = 1;
         for (let x = 0; x < this.colsNum; x++) {
@@ -280,8 +299,8 @@ export class Get47Board extends cc.Component {
         return linePieces;
     }
 
-    private getHorizontalLines():Array<Piece> {
-        let linePieces:Array<Piece> = [];
+    private getHorizontalLines(): Array<Piece> {
+        let linePieces: Array<Piece> = [];
         let count = 1;
         for (let y = 0; y < this.rowsNum; y++) {
             for (let x = 0; x < this.colsNum - 2; x = x + count) {
@@ -333,7 +352,8 @@ export class Get47Board extends cc.Component {
         return null;
     }
 
-    private newView() {
+    public newView(input: number = 0) {
+        this.inputDir = input;
         if (!this.runningAction) {
             this.runningAction = true;
             let finished = 0;
@@ -342,7 +362,8 @@ export class Get47Board extends cc.Component {
                     let action = cc.sequence(cc.scaleTo(0.3, 0, 0),
                         cc.callFunc(() => {
                             finished++;
-                            if (finished === (this.colsNum-1)*(this.rowsNum-1)) {
+                            if (finished === (this.colsNum - 1) * (this.rowsNum - 1)) {
+                                this.runningAction = false;
                                 this.addPieces();
                             }
                         })

@@ -36,6 +36,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("puzzle");
     }
 
+    public enterGet47() {
+        this.loadSceneWithProgress("get47");
+    }
+
     private setLoadingDisplay () {
         if(cc.sys.isNative){
             return;

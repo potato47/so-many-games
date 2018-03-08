@@ -2142,7 +2142,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 462.71,
+      "width": 180.15,
       "height": 50
     },
     "_rotationX": 0,
@@ -2179,7 +2179,7 @@
     },
     "_isSystemFontUsed": false,
     "_spacingX": 0,
-    "_N$string": "Get37 | 女生节红包",
+    "_N$string": "Get 47",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -2283,7 +2283,7 @@
       "__id__": 2
     },
     "component": "HallScene",
-    "handler": "onBtnPuzzle",
+    "handler": "onBtnGet47",
     "customEventData": ""
   },
   {

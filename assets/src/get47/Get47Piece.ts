@@ -10,7 +10,7 @@ export class Piece extends cc.Component {
 
     public x: number = 0;
     public y: number = 0;
-    public pos: cc.Vec2 = cc.v2();
+    public posIndex: cc.Vec2 = cc.v2();
     public isAlive: boolean = true;
     private _n: number = 0;
     public get type(): number {
@@ -24,8 +24,9 @@ export class Piece extends cc.Component {
     public init(x: number, y: number) {
         this.x = x;
         this.y = y;
-        this.pos = this.node.position;
+        this.posIndex = this.node.position;
         this.randomType();
+        this.isAlive = true;
     }
 
     randomType(){
