@@ -22,6 +22,42 @@ window._CCSettings = {
                 "res/textures/jieyi.png",
                 0
             ],
+            "c4DciyLP5NdKyhTX+pS1hf": [
+                "res/textures/number/Eight.png",
+                0
+            ],
+            "93Hv1HmZNArquzIQBdz7hh": [
+                "res/textures/number/Five.png",
+                0
+            ],
+            "af7+vpW/ZJBpHgsAu/XuQG": [
+                "res/textures/number/Four.png",
+                0
+            ],
+            "ccNAlhpPlIYJ25chwxvfJE": [
+                "res/textures/number/Nine.png",
+                0
+            ],
+            "892k7TjSxA/qBuH75uRITZ": [
+                "res/textures/number/One.png",
+                0
+            ],
+            "b5HaF28CBBKpviLfPRao9L": [
+                "res/textures/number/Seven.png",
+                0
+            ],
+            "6fIlgD91ZMzYa6l+9LMQzq": [
+                "res/textures/number/Six.png",
+                0
+            ],
+            "43WpX5y1RIFI7fg6ej7S8i": [
+                "res/textures/number/Three.png",
+                0
+            ],
+            "4caT2i6lZNMoyZE9LUEXzG": [
+                "res/textures/number/Two.png",
+                0
+            ],
             "e7bVLkieZANatUaOxb3GaB": [
                 "res/textures/square.png",
                 0
@@ -89,7 +125,11 @@ window._CCSettings = {
     scenes: [
         {
             url: "db://assets/res/scenes/loding.fire",
-            uuid: 7
+            uuid: 8
+        },
+        {
+            url: "db://assets/res/scenes/get47.fire",
+            uuid: 5
         },
         {
             url: "db://assets/res/scenes/gobang.fire",
@@ -97,11 +137,11 @@ window._CCSettings = {
         },
         {
             url: "db://assets/res/scenes/hall.fire",
-            uuid: 6
+            uuid: 7
         },
         {
             url: "db://assets/res/scenes/jump.fire",
-            uuid: 5
+            uuid: 6
         },
         {
             url: "db://assets/res/scenes/2048.fire",
@@ -113,7 +153,7 @@ window._CCSettings = {
         },
         {
             url: "db://assets/res/scenes/reversi.fire",
-            uuid: 8
+            uuid: 9
         }
     ],
     packedAssets: {
@@ -137,6 +177,23 @@ window._CCSettings = {
             "e7q6FL+VZEgLJUjVeDLic/",
             4
         ],
+        "0889b0b0b": [
+            "025lE0eT1JWo9GrbRH2Cm7",
+            5,
+            "13A9FWqL9MDLq29CqNrROv",
+            "1dqxaWi8ZPD4RMMfIw6HYk",
+            "44Yfc/gnRI0JWHBAlRXtX6",
+            "4ewStZS1tA752H89ioDgjl",
+            "6f5Nu99V1FXbvLHexiXUDc",
+            "76eq7GTYhAMK5529Q4oNkj",
+            "7erlmxw/pDnJhnk9h/MUWY",
+            "8dp6eB/kFM0qw36iHjqQYk",
+            2,
+            3,
+            "adAuLo2M1EyIKBB0vQ5KA5",
+            "beh7eFwNFPma0dPbnH7PKL",
+            "c7W/B+K4VBtbZ6FAlCp9pc"
+        ],
         "090a99623": [
             "0dUfa9dYFH+Z7vb7F+QaxK",
             "45anNQJuNMRpWUI0r5vCjF",
@@ -144,26 +201,26 @@ window._CCSettings = {
             "8855/VlrRKd6H0MSRnFxAU",
             2,
             "9fQHYCOmVNh4IdI6jnPD6r",
-            5
+            6
         ],
         "0b1bf8e52": [
             "29FYIk+N1GYaeWH/q1NxQO",
             "5cO7kybDxGj4ipyMYdRYZB",
             "5f5dyqtRNNxaFmVzYns6FZ",
-            6,
+            7,
             2,
             "9bvaMerUlDyary99mJa6xp",
             "e97GVMl6JHh5Ml5qEDdSGa",
             "f0BIwQ8D5Ml7nTNQbh1YlS"
         ],
         "0b7146e97": [
-            7,
+            8,
             "4fhQ8WQRxAr4BjnTF7Byv1",
             2,
             3
         ],
         "0c49ae998": [
-            8,
+            9,
             2,
             3
         ]
@@ -175,6 +232,7 @@ window._CCSettings = {
         "94nZeiRMRHOI4JOOrCtcLD",
         "a2MjXRFdtLlYQ5ouAFv/+R",
         "f0VE8ZW5FBJ7wrJMF5vn3V",
+        "08g05AO35JTrQWW4NnnwHr",
         "a2iLu4Y9xJX6NaE5Lmkt9T",
         "8acfqbljRHXK2shXdwXQRJ",
         "0dnG4Oh6tGRbZ3rrL5WUw/",
@@ -184,8 +242,9 @@ window._CCSettings = {
         "03/03f7ca26f.json": "52993",
         "06/0629afa22.json": "5a785",
         "07/0706b59e8.json": "ccac0",
+        "08/0889b0b0b.json": "ec282",
         "09/090a99623.json": "dd86a",
-        "0b/0b1bf8e52.json": "957a3",
+        "0b/0b1bf8e52.json": "62a7a",
         "0b/0b7146e97.json": "beb2f",
         "0c/0c49ae998.json": "9eaa0",
         "c6/c6e87de6-c9df-4ae7-b9db-3812d622863f.json": "14a51",
@@ -193,6 +252,15 @@ window._CCSettings = {
         "assets/res/textures/bg.jpg": "e7b3b",
         "assets/res/textures/circle.png": "f2b24",
         "assets/res/textures/jieyi.png": "4192e",
+        "assets/res/textures/number/Eight.png": "3be06",
+        "assets/res/textures/number/Five.png": "49e76",
+        "assets/res/textures/number/Four.png": "16358",
+        "assets/res/textures/number/Nine.png": "917f0",
+        "assets/res/textures/number/One.png": "1473b",
+        "assets/res/textures/number/Seven.png": "e3a13",
+        "assets/res/textures/number/Six.png": "dabf6",
+        "assets/res/textures/number/Three.png": "da501",
+        "assets/res/textures/number/Two.png": "377f8",
         "assets/res/textures/square.png": "89d13",
         "assets/res/textures/streak_05_001.png": "64d59",
         "assets/res/textures/streak.png": "34961",
