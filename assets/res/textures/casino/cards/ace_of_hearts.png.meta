@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "1c29d281-a0bb-49ec-b28b-272cdf75f556",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "ace_of_hearts": {
+      "ver": "1.0.3",
+      "uuid": "0d3f89d6-20a2-4a9d-894d-bf637a4c6105",
+      "rawTextureUuid": "1c29d281-a0bb-49ec-b28b-272cdf75f556",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 500,
+      "height": 726,
+      "rawWidth": 500,
+      "rawHeight": 726,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

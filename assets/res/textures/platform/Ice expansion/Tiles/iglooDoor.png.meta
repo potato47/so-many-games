@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "bdb3634f-104a-4673-a944-9ce04470245c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "iglooDoor": {
+      "ver": "1.0.3",
+      "uuid": "3d6ea598-fe25-493e-83c5-d215d3596652",
+      "rawTextureUuid": "bdb3634f-104a-4673-a944-9ce04470245c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

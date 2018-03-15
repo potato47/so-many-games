@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "49e5aa01-1dbe-4833-9fd4-88208feca097",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "iceBlockAlt": {
+      "ver": "1.0.3",
+      "uuid": "769a49dc-933b-43a0-bfdb-f4fb5ddae478",
+      "rawTextureUuid": "49e5aa01-1dbe-4833-9fd4-88208feca097",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

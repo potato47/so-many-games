@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "2bdc77ed-3c21-437f-8fa3-bbe0643a2421",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "chocoHillRight2": {
+      "ver": "1.0.3",
+      "uuid": "6bf13c64-3411-4f97-8e04-52e021151014",
+      "rawTextureUuid": "2bdc77ed-3c21-437f-8fa3-bbe0643a2421",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

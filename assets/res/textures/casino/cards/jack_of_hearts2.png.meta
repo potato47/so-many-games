@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "ccf730e5-8e43-400a-a1fc-556f9b73101c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "jack_of_hearts2": {
+      "ver": "1.0.3",
+      "uuid": "d5f516ff-7f28-46ab-ae1f-057ac6112116",
+      "rawTextureUuid": "ccf730e5-8e43-400a-a1fc-556f9b73101c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 500,
+      "height": 726,
+      "rawWidth": 500,
+      "rawHeight": 726,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

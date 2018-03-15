@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e31e2df3-1b57-42e8-92df-237598882ce9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "hud_gem_green": {
+      "ver": "1.0.3",
+      "uuid": "0fe3ea5c-1c9e-4f9c-87d1-a6020abc69e7",
+      "rawTextureUuid": "e31e2df3-1b57-42e8-92df-237598882ce9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 46,
+      "height": 36,
+      "rawWidth": 46,
+      "rawHeight": 36,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

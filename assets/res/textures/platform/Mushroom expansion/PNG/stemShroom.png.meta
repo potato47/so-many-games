@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "7449b4b4-1a46-4732-b707-95e347866962",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "stemShroom": {
+      "ver": "1.0.3",
+      "uuid": "fbb2f6d9-c8e5-456e-9447-523625bb9f0e",
+      "rawTextureUuid": "7449b4b4-1a46-4732-b707-95e347866962",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

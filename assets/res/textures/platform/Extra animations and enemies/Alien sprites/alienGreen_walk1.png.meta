@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "84336f44-7564-4f72-aa33-9b08d11b5ed3",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "alienGreen_walk1": {
+      "ver": "1.0.3",
+      "uuid": "9b240921-1225-4415-ac91-5c392e149c91",
+      "rawTextureUuid": "84336f44-7564-4f72-aa33-9b08d11b5ed3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 68,
+      "height": 93,
+      "rawWidth": 68,
+      "rawHeight": 93,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

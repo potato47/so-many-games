@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "3a1fa3f5-e7bf-4641-be4b-2c9917e704cf",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "alienPink_walk1": {
+      "ver": "1.0.3",
+      "uuid": "8985cc8d-bdf7-41c8-831b-87764eca1e16",
+      "rawTextureUuid": "3a1fa3f5-e7bf-4641-be4b-2c9917e704cf",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 68,
+      "height": 93,
+      "rawWidth": 68,
+      "rawHeight": 93,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

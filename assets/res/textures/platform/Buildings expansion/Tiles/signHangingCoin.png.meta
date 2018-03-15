@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "61e2ec78-7916-4b87-9692-c3b25b385650",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "signHangingCoin": {
+      "ver": "1.0.3",
+      "uuid": "f4e42b4d-f6c9-4aa0-8790-f12971e993ed",
+      "rawTextureUuid": "61e2ec78-7916-4b87-9692-c3b25b385650",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 3.5,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 63,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

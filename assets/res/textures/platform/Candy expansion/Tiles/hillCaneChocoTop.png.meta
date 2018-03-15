@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "53dcf94e-4295-4019-b647-e7b4a2860a55",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "hillCaneChocoTop": {
+      "ver": "1.0.3",
+      "uuid": "a85236c2-078d-4379-b0c8-fce9c8215161",
+      "rawTextureUuid": "53dcf94e-4295-4019-b647-e7b4a2860a55",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

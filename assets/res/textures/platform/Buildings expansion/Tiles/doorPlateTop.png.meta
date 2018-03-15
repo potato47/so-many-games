@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5fb215bf-aa09-42f4-96a2-49479a19cbe8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "doorPlateTop": {
+      "ver": "1.0.3",
+      "uuid": "63fae472-9674-4b30-9b80-5b48f9fb624f",
+      "rawTextureUuid": "5fb215bf-aa09-42f4-96a2-49479a19cbe8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -15,
+      "trimX": 0,
+      "trimY": 30,
+      "width": 70,
+      "height": 40,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

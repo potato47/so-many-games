@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "94256ed6-0756-43e3-bae4-b28f2192f478",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "cardOutline_clubsK": {
+      "ver": "1.0.3",
+      "uuid": "ccc21ee0-2395-461a-8453-fdc22933c9dd",
+      "rawTextureUuid": "94256ed6-0756-43e3-bae4-b28f2192f478",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 117,
+      "height": 171,
+      "rawWidth": 117,
+      "rawHeight": 171,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

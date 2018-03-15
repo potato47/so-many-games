@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "0b00ad91-a776-48de-9e4a-f7e90affc208",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "doorKnobAlt": {
+      "ver": "1.0.3",
+      "uuid": "f3773660-cc76-440a-8a8c-9a5097f4c6e2",
+      "rawTextureUuid": "0b00ad91-a776-48de-9e4a-f7e90affc208",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

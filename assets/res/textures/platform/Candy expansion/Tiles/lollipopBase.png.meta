@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "ce93a27f-3196-4639-9b8e-0c11927cb0ae",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "lollipopBase": {
+      "ver": "1.0.3",
+      "uuid": "fb01c50e-f18e-4403-96e9-ea5cf48e2a11",
+      "rawTextureUuid": "ce93a27f-3196-4639-9b8e-0c11927cb0ae",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 31,
+      "trimY": 0,
+      "width": 8,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

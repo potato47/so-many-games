@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a956a4c8-9fb8-4245-87dc-e57291590d79",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "alienBlue_climb1": {
+      "ver": "1.0.3",
+      "uuid": "fdfd7f81-e8dd-4b1e-9913-e1e6d993bae7",
+      "rawTextureUuid": "a956a4c8-9fb8-4245-87dc-e57291590d79",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 66,
+      "height": 92,
+      "rawWidth": 66,
+      "rawHeight": 92,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

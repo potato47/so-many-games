@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "2377fb69-7c96-4e97-830d-59ab4f44b382",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "hud_coins": {
+      "ver": "1.0.3",
+      "uuid": "85b6cb01-36d8-4ef2-9a1d-63d80c032494",
+      "rawTextureUuid": "2377fb69-7c96-4e97-830d-59ab4f44b382",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 47,
+      "height": 47,
+      "rawWidth": 47,
+      "rawHeight": 47,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

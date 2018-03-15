@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "3d2c7d21-cd97-4533-863c-a79ef78c51da",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "king_of_clubs2": {
+      "ver": "1.0.3",
+      "uuid": "4810fa00-518d-4be4-b42c-7531ae5e87bf",
+      "rawTextureUuid": "3d2c7d21-cd97-4533-863c-a79ef78c51da",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 500,
+      "height": 726,
+      "rawWidth": 500,
+      "rawHeight": 726,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

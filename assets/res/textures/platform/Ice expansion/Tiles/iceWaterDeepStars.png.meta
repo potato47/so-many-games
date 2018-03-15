@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "388b48c5-853f-4ac2-8b88-5c6f571e728a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "iceWaterDeepStars": {
+      "ver": "1.0.3",
+      "uuid": "046ed555-f9b6-43b7-8c61-da4a79b846ea",
+      "rawTextureUuid": "388b48c5-853f-4ac2-8b88-5c6f571e728a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 70,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

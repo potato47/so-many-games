@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "37c6675a-7356-4531-a606-df8d80a4bbe0",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "jack_of_clubs2": {
+      "ver": "1.0.3",
+      "uuid": "fd8a1ab2-d5fd-4f6e-83c0-0e881c18d25c",
+      "rawTextureUuid": "37c6675a-7356-4531-a606-df8d80a4bbe0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 500,
+      "height": 726,
+      "rawWidth": 500,
+      "rawHeight": 726,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "4af58397-a2e3-4c03-9a4c-e92816ae4701",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "ladyBug_fly": {
+      "ver": "1.0.3",
+      "uuid": "f3c06e1a-cf71-41db-a579-531bc0409233",
+      "rawTextureUuid": "4af58397-a2e3-4c03-9a4c-e92816ae4701",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 59,
+      "height": 42,
+      "rawWidth": 59,
+      "rawHeight": 42,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

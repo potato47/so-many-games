@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "abbb7963-0b53-4935-8460-3663e2aa3dff",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "creamChoco": {
+      "ver": "1.0.3",
+      "uuid": "770cd16f-03b3-4337-9182-448e174cea40",
+      "rawTextureUuid": "abbb7963-0b53-4935-8460-3663e2aa3dff",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -7.5,
+      "trimX": 0,
+      "trimY": 15,
+      "width": 70,
+      "height": 55,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

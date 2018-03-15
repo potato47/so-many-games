@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "afe816d1-ac43-44eb-a531-0a570d8e1423",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "tinyShroom_red": {
+      "ver": "1.0.3",
+      "uuid": "5b51c77f-8b64-4735-9a8c-c2c6884393c2",
+      "rawTextureUuid": "afe816d1-ac43-44eb-a531-0a570d8e1423",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1.5,
+      "offsetY": -20,
+      "trimX": 14,
+      "trimY": 40,
+      "width": 39,
+      "height": 30,
+      "rawWidth": 70,
+      "rawHeight": 70,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

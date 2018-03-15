@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "8f80f60c-ae73-41b0-8142-1f18c1315e93",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "alienBlue_swim2": {
+      "ver": "1.0.3",
+      "uuid": "bc044d07-fc14-46a4-aa7d-58c2bbb5a7f4",
+      "rawTextureUuid": "8f80f60c-ae73-41b0-8142-1f18c1315e93",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 70,
+      "height": 97,
+      "rawWidth": 70,
+      "rawHeight": 97,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

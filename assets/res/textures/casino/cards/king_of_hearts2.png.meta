@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5375468f-6415-423e-bc7f-64b6fe563f23",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "king_of_hearts2": {
+      "ver": "1.0.3",
+      "uuid": "78f63e02-0fec-420c-8699-d386a9e72dd7",
+      "rawTextureUuid": "5375468f-6415-423e-bc7f-64b6fe563f23",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 500,
+      "height": 726,
+      "rawWidth": 500,
+      "rawHeight": 726,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
