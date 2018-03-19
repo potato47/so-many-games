@@ -15,4 +15,20 @@ export class TetrisScene extends cc.Component {
     startGame() {
 
     }
+
+    onBtnLeft() {
+        this.board.playerMove(-1);
+    }
+
+    onBtnRight() {
+        this.board.playerMove(1);
+    }
+
+    onBtnRotate() {
+        this.board.playerRotate(1);
+    }
+
+    onBtnDrop() {
+        this.board.playerDrop();
+    }
 }
