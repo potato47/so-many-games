@@ -40,6 +40,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("get47");
     }
 
+    public enterTetris() {
+        this.loadSceneWithProgress("tetris");
+    }
+
     private setLoadingDisplay () {
         if(cc.sys.isNative){
             return;

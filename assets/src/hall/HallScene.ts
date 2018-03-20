@@ -29,4 +29,8 @@ export class HallScene extends cc.Component {
         G.enterGet47();
     }
 
+    onBtnTetris() {
+        G.enterTetris();
+    }
+
 }
