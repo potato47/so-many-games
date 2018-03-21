@@ -188,8 +188,8 @@
                 BK.Script.loadlib('GameRes://' + url);
             };
             require('libs/qqplay-adapter.js');
-            require('src/settings.54389.js');
-            require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.93420.js');
+            require('src/settings.f73da.js');
+            require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.dac82.js');
             require('libs/qqplay-downloader.js');
             var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
             cc.loader.insertPipeAfter(prevPipe, qqPlayDownloader);
@@ -199,7 +199,7 @@
     }
 
     if (false) {
-        require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.93420.js');
+        require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.dac82.js');
         var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
         cc.loader.insertPipeAfter(prevPipe, wxDownloader);
         boot();
@@ -207,7 +207,7 @@
     }
 
     if (window.jsb) {
-        require('src/settings.54389.js');
+        require('src/settings.f73da.js');
         require('src/jsb_polyfill.js');
         boot();
         return;
@@ -219,7 +219,7 @@
 
         var cocos2d = document.createElement('script');
         cocos2d.async = true;
-        cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.93420.js';
+        cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.dac82.js';
 
         var engineLoaded = function () {
             document.body.removeChild(cocos2d);
