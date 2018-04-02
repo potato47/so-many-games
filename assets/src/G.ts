@@ -1,11 +1,11 @@
 import { GameRoot } from "./shared/GameRoot";
 
 class GlobalInstance {
-    
-    public static readonly Instance:GlobalInstance = new GlobalInstance();
-    public gameRoot:GameRoot = null;
 
-    private constructor(){
+    public static readonly Instance: GlobalInstance = new GlobalInstance();
+    public gameRoot: GameRoot = null;
+
+    private constructor() {
     }
 
     public enterHall() {
@@ -19,7 +19,7 @@ class GlobalInstance {
     public enterGobang() {
         this.loadSceneWithProgress("gobang");
     }
-    
+
     public enterReversi() {
         this.loadSceneWithProgress("reversi");
     }
@@ -44,8 +44,12 @@ class GlobalInstance {
         this.loadSceneWithProgress("tetris");
     }
 
-    private setLoadingDisplay () {
-        if(cc.sys.isNative){
+    public enterMine() {
+        this.loadSceneWithProgress("mine");
+    }
+
+    private setLoadingDisplay() {
+        if (cc.sys.isNative) {
             return;
         }
         // Loading splash scene
@@ -65,12 +69,12 @@ class GlobalInstance {
         });
     }
 
-    private loadSceneWithProgress(scene:string,cb?:Function){
+    private loadSceneWithProgress(scene: string, cb?: Function) {
         this.setLoadingDisplay();
-        cc.director.preloadScene(scene,()=>{
-            setTimeout(()=>{
-                cc.director.loadScene(scene,cb);
-            },1000);
+        cc.director.preloadScene(scene, () => {
+            setTimeout(() => {
+                cc.director.loadScene(scene, cb);
+            }, 1000);
         });
     }
 }
