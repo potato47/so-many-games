@@ -137,12 +137,12 @@ export class Board extends cc.Component {
     playerRotate(dir: number) {
         const pos = this.player.pos.x;
         let offset = 1;
-        this.rotate(this.player.matrix, dir);
+        this.rotate(this.player.matrix, -dir);
         while (this.collide()) {
             this.player.pos.x += offset;
             offset = -(offset + (offset > 0 ? 1 : -1));
             if (offset > this.player.matrix.length) {
-                this.rotate(this.player.matrix, -dir);
+                this.rotate(this.player.matrix, dir);
                 this.player.pos.x = pos;
                 return;
             }
@@ -152,15 +152,15 @@ export class Board extends cc.Component {
 
     arenaSweep() {
         let rowCount = 1;
-        outer: for (let y = 0; y < this.arena[0].length - 1; y++) {
-            for (let x = 0; x < this.arena.length; x++) {
+        outer: for (let y = 0; y < this.arena.length - 1; y++) {
+            for (let x = 0; x < this.arena[y].length; x++) {
                 if (this.arena[y][x] === 0) {
                     continue outer;
                 }
             }
             const row = this.arena.splice(y, 1)[0].fill(0);
             this.arena.push(row);
-            y++;
+            y--;
 
             this.player.score += rowCount * 10;
             rowCount *= 2;
