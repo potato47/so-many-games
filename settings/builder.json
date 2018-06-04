@@ -3,6 +3,7 @@
   "appSecret": "",
   "encryptJs": true,
   "excludeScenes": [],
+  "fb-instant-games": {},
   "includeAnySDK": false,
   "includeSDKBox": false,
   "inlineSpriteFrames": true,
@@ -20,18 +21,17 @@
   },
   "packageName": "org.cocos2d.so-many-games",
   "privateKey": "",
+  "qqplay": {
+    "orientation": "portrait"
+  },
   "renderMode": "0",
   "startScene": "0d9c6e0e-87ab-4645-b677-aeb2f9594c3f",
   "title": "so-many-games",
-  "webOrientation": "auto",
+  "webOrientation": "portrait",
   "wechatgame": {
     "appid": "",
     "orientation": "portrait"
   },
   "xxteaKey": "c82f3743-91f3-41",
-  "zipCompressJs": true,
-  "qqplay": {
-    "orientation": "portrait"
-  },
-  "fb-instant-games": {}
+  "zipCompressJs": true
 }
