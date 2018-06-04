@@ -150,7 +150,7 @@
 
         // jsList
         var jsList = settings.jsList;
-        var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.d4914.js';
+        var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.f7c4b.js';
         if (jsList) {
             jsList = jsList.map(function (x) { return 'src/' + x; });
             jsList.push(bundledScript);
@@ -188,7 +188,7 @@
                 BK.Script.loadlib('GameRes://' + url);
             };
             require('libs/qqplay-adapter.js');
-            require('src/settings.aea06.js');
+            require('src/settings.bb6df.js');
             require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.93420.js');
             require('libs/qqplay-downloader.js');
             var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
@@ -207,7 +207,7 @@
     }
 
     if (window.jsb) {
-        require('src/settings.aea06.js');
+        require('src/settings.bb6df.js');
         require('src/jsb_polyfill.js');
         boot();
         return;
