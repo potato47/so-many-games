@@ -14,23 +14,18 @@ export class LinkBoard extends cc.Component {
     private colNum: number = 10;
     @property(cc.Integer)
     private colSpace: number = 5;
+    @property(cc.Graphics)
+    private pen: cc.Graphics = null;
+    @property(cc.Integer)
+    private pictureNum: number = 8;
 
     private colWidth: number = 0;
     private pieceMap: Array<Array<Piece>>;
     private lastPiece: Piece = null;
 
     private linkScene: LinkScene = null;
-
-    // init(linkScene: LinkScene) {
-    //     this.linkScene = linkScene;
-    //     this.addListeners();
-    // }
-
-    start() {
-        this.reset();
-    }
-
-    public reset() {
+    
+    onLoad() {
         this.colWidth = (this.node.width - this.colSpace * (this.colNum + 1)) / this.colNum;
         this.node.removeAllChildren();
         this.pieceMap = [];
@@ -46,14 +41,17 @@ export class LinkBoard extends cc.Component {
                 let piece = pieceNode.getComponent(Piece);
                 this.pieceMap[x][y] = piece;
                 // 最外一圈当作墙
-                if (x === 0 || y === 0 || x === this.colNum - 1 || y === this.colNum - 1) {
-                    this.pieceMap[x][y].init(x, y, 0);
-                } else {
-                    this.pieceMap[x][y].init(x, y, 25);
-                }
+                this.pieceMap[x][y].init(x, y, 0);
                 this.addTouchEvent(piece);
             }
         }
+    }
+
+    init(linkScene: LinkScene) {
+        this.linkScene = linkScene;
+    }
+    
+    public reset() {
         this.shuffle();
     }
 
@@ -67,11 +65,13 @@ export class LinkBoard extends cc.Component {
                     piece.setState(PIECE_STATE.PRESS);
                     this.lastPiece = piece;
                 } else {
-                    if (this.canLink(piece, this.lastPiece)) {
-                        this.link(piece, this.lastPiece);
+                    if (this.link(this.lastPiece, piece)) {
+                        this.lastPiece = null;
+                        this.judgeWin();
                     } else {
                         this.lastPiece.setState(PIECE_STATE.IDLE);
-                        this.lastPiece = null;
+                        piece.setState(PIECE_STATE.PRESS);
+                        this.lastPiece = piece;
                     }
                 }
             } else if (piece.state === PIECE_STATE.PRESS) {
@@ -81,161 +81,160 @@ export class LinkBoard extends cc.Component {
         }, this);
     }
 
-    private find(piece: Piece, excPieces: Piece[] = []): Piece[] {
-        let pX = piece.x, pY = piece.y;
-        let path: Piece[] = [];
-        for (let x = pX + 1; x < this.colNum; x++) {
-            if (this.pieceMap[x][pY].type === 0) {
-                path.push(this.pieceMap[x][pY]);
-            } else {
-                break;
+    canDirectLink(piece1: Piece, piece2: Piece): boolean {
+        if (piece1.x === piece2.x) {
+            let minY = Math.min(piece1.y, piece2.y);
+            let maxY = Math.max(piece1.y, piece2.y);
+            for (let y = minY + 1; y < maxY; y++) {
+                if (this.pieceMap[piece1.x][y].type !== 0) {
+                    return false
+                }
             }
+            return true;
         }
-        for (let x = pX - 1; x >= 0; x--) {
-            if (this.pieceMap[x][pY].type === 0) {
-                path.push(this.pieceMap[x][pY]);
-            } else {
-                break;
-            }
-        }
-        for (let y = pY + 1; y < this.colNum; y++) {
-            if (this.pieceMap[pX][y].type === 0) {
-                path.push(this.pieceMap[pX][y]);
-            } else {
-                break;
-            }
-        }
-        for (let y = pY - 1; y >= 0; y--) {
-            if (this.pieceMap[pX][y].type === 0) {
-                path.push(this.pieceMap[pX][y]);
-            } else {
-                break;
-            }
-        }
-        return path;
-    }
-
-    // 可以直线相连
-    private canPass(piece1: Piece, piece2: Piece) {
-
-    }
-
-    private canLink(piece1: Piece, piece2: Piece): boolean {
-        if (piece1 === piece2) {
-            return false;
-        }
-        let s0 = this.find(piece1);
-        let crossNum = 0;
-        while(s0.indexOf(piece2) === -1 && crossNum < 3) {
-            let s1: Piece[] = [];
-            s0.forEach(p => {
-
-            });
-            s0.push();
-            crossNum++;
-        }
-        // 一条线
-        let pass = true;
-        let path = [];
         if (piece1.y === piece2.y) {
             let minX = Math.min(piece1.x, piece2.x);
             let maxX = Math.max(piece1.x, piece2.x);
-            for (let x = minX; x <= maxX; x++) {
+            for (let x = minX + 1; x < maxX; x++) {
                 if (this.pieceMap[x][piece1.y].type !== 0) {
-                    pass = false;
+                    return false
                 }
             }
-        } else if (piece1.x === piece2.x) {
-            let minY = Math.min(piece1.y, piece2.y);
-            let maxY = Math.max(piece1.y, piece2.y);
-            for (let y = minY; y <= maxY; y++) {
-                if (this.pieceMap[piece1.x][y].type !== 0) {
-                    pass = false;
-                }
-            }
-        } else {
-
+            return true;
         }
         return false;
     }
 
-    private link(piece1: Piece, piece2: Piece) {
+    findCorner(piece1: Piece, piece2: Piece): [boolean, Array<Piece>] {
+        let c1: Piece, c2: Piece;
+        // 0折
+        if (this.canDirectLink(piece1, piece2)) {
+            return [true, []];
+        }
+        // 1折 找一个点
+        c1 = this.pieceMap[piece1.x][piece2.y];
+        if (c1.type === 0 && this.canDirectLink(c1, piece1) && this.canDirectLink(c1, piece2)) {
+            return [true, [c1]];
+        }
+        c1 = this.pieceMap[piece2.x][piece1.y];
+        if (c1.type === 0 && this.canDirectLink(c1, piece1) && this.canDirectLink(c1, piece2)) {
+            return [true, [c1]];
+        }
+        // 2折 找一条线
+        for (let x = 0; x < this.colNum; x++) {
+            if (x === piece1.x || x === piece2.x) {
+                continue;
+            }
+            c1 = this.pieceMap[x][piece1.y];
+            c2 = this.pieceMap[x][piece2.y];
+            if (c1.type === 0 && c2.type === 0
+                && this.canDirectLink(c1, c2)
+                && this.canDirectLink(c1, piece1)
+                && this.canDirectLink(c2, piece2)) {
+                return [true, [c1, c2]];
+            }
+        }
+        for (let y = 0; y < this.colNum; y++) {
+            if (y === piece1.y || y === piece2.y) {
+                continue;
+            }
+            c1 = this.pieceMap[piece1.x][y];
+            c2 = this.pieceMap[piece2.x][y];
+            if (c1.type === 0 && c2.type === 0
+                && this.canDirectLink(c1, c2)
+                && this.canDirectLink(c1, piece1)
+                && this.canDirectLink(c2, piece2)) {
+                return [true, [c1, c2]];
+            }
+        }
+        return [false, null];
+    }
 
+    private link(piece1: Piece, piece2: Piece): boolean {
+        if (piece1.type !== piece2.type) {
+            return false;
+        }
+        let [pass, corners] = this.findCorner(piece1, piece2);
+        if (pass) {
+            this.drawLine([piece1].concat(corners).concat(piece2));
+            piece1.setType(0);
+            piece2.setType(0);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private drawLine(path: Piece[]) {
+        let pos = this.getPieceCenterPosition(path[0]);
+        this.pen.moveTo(pos.x, pos.y);
+        for (let i = 1; i < path.length; i++) {
+            pos = this.getPieceCenterPosition(path[i]);
+            this.pen.lineTo(pos.x, pos.y);
+        }
+        this.pen.stroke();
+        setTimeout(() => {
+            this.clearLine();
+        }, 500);
+    }
+
+    private clearLine() {
+        this.pen.clear();
+    }
+
+    private getPieceCenterPosition(piece: Piece): cc.Vec2 {
+        let x = piece.x * (this.colWidth + this.colSpace) + this.colSpace + this.colWidth / 2;
+        let y = piece.y * (this.colWidth + this.colSpace) + this.colSpace + this.colWidth / 2;
+        return cc.v2(x, y);
     }
 
     private shuffle() {
-        // for (let i = 0; i < 1000; i++) {
-        //     let nearPieces = this.getNearPieces(this.blankPiece);
-        //     let n = Math.floor(Math.random() * nearPieces.length);
-        //     this.exchangeTwoPiece(this.blankPiece, nearPieces[n]);
-        // }
+        let pictureList = [];
+        for (let i = 1; i <= 78; i++) {
+            pictureList.push(i);
+        }
+        let pending = [];
+        for (let x = 1; x < this.colNum - 1; x++) {
+            for (let y = 1; y < this.colNum - 1; y++) {
+                pending.push(this.pieceMap[x][y]);
+            }
+        }
+        let p1, p2;
+        let pieceNum = (this.colNum - 2) ** 2;
+        let rem = pieceNum / 2 % this.pictureNum; // 余数，重复的几对
+        let coupleNum = (pieceNum / 2 - rem) / this.pictureNum; // 相同的图片有多少对
+        for (let i = 0; i < this.pictureNum; i++) {
+            let picture = this.randomPop(pictureList);
+            for (let j = 0; j < coupleNum * 2; j++) {
+                let p = this.randomPop(pending);
+                p.setType(picture);
+                p.setState(PIECE_STATE.IDLE);
+            }
+            if (i < rem) {
+                for(let k = 0; k < 2; k++) {
+                    let p = this.randomPop(pending);
+                    p.setType(picture);
+                    p.setState(PIECE_STATE.IDLE);
+                }
+            }
+        }
     }
 
-    // private onBoadTouch(event: cc.Event.EventTouch) {
-    //     let worldPos = event.getLocation();
-    //     let localPos = this.node.convertToNodeSpaceAR(worldPos);
-    //     let x = Math.floor((localPos.x - this.colSpace) / (this.colWidth + this.colSpace));
-    //     let y = Math.floor((localPos.y - this.colSpace) / (this.colWidth + this.colSpace));
-    //     this.puzzleScene.onBoardTouch(x, y);
-    // }
+    private randomPop(arr: Array<any>) {
+        let n = Math.random() * arr.length | 0;
+        return arr.splice(n, 1)[0];
+    }
 
-    // public movePiece(x, y): boolean {
-    //     let piece = this.pieceMap[x][y];
-    //     let nearPieces = this.getNearPieces(piece);
-    //     for (let nearPiece of nearPieces) {
-    //         if (nearPiece.isBlank) {
-    //             this.exchangeTwoPiece(piece, nearPiece);
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
-
-    // public judgeWin(): boolean {
-    //     for (let x = 0; x < this.colNum; x++) {
-    //         for (let y = 0; y < this.colNum; y++) {
-    //             if (!this.pieceMap[x][y].isRight) {
-    //                 return false;
-    //             }
-    //         }
-    //     }
-    //     this.blankPiece.node.active = true;
-    //     return true;
-    // }
-
-    // private getNearPieces(piece: Piece): Array<Piece> {
-    //     let nearPieces = [];
-    //     if (piece.curCol > 0) { // left
-    //         nearPieces.push(this.pieceMap[piece.curCol - 1][piece.curRow]);
-    //     }
-    //     if (piece.curCol < this.colNum - 1) { // right
-    //         nearPieces.push(this.pieceMap[piece.curCol + 1][piece.curRow]);
-    //     }
-    //     if (piece.curRow > 0) { // bottom
-    //         nearPieces.push(this.pieceMap[piece.curCol][piece.curRow - 1]);
-    //     }
-    //     if (piece.curRow < this.colNum - 1) { // top
-    //         nearPieces.push(this.pieceMap[piece.curCol][piece.curRow + 1]);
-    //     }
-    //     return nearPieces;
-    // }
-
-    // public exchangeTwoPiece(piece1: Piece, piece2: Piece) {
-    //     this.pieceMap[piece2.curCol][piece2.curRow] = piece1;
-    //     this.pieceMap[piece1.curCol][piece1.curRow] = piece2;
-
-    //     [piece1.curCol, piece2.curCol] = [piece2.curCol, piece1.curCol];
-    //     [piece1.curRow, piece2.curRow] = [piece2.curRow, piece1.curRow];
-
-    //     [piece1.node.position, piece2.node.position] = [piece2.node.position, piece1.node.position];
-    // }
-
-    // private addListeners() {
-    //     this.node.on(cc.Node.EventType.TOUCH_END, this.onBoadTouch, this);
-    // }
-
-    // private removeListeners() {
-
-    // }
+    public judgeWin(): boolean {
+        for (let x = 0; x < this.colNum; x++) {
+            for (let y = 0; y < this.colNum; y++) {
+                if (this.pieceMap[x][y].type !== 0) {
+                    return false;
+                }
+            }
+        }
+        this.linkScene.overGame();
+        return true;
+    }
 
 }

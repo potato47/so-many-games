@@ -1,7 +1,7 @@
 import { STATE } from "./PuzzleConstants";
 import { PuzzleBoard } from "./PuzzleBoard";
 import { G } from "../G";
-import { Timer } from "./PuzzleTimer";
+import { Timer } from "../shared/Timer";
 
 const { ccclass, property } = cc._decorator;
 

@@ -45,7 +45,7 @@
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
     "groupIndex": 0,
-    "autoReleaseAssets": null
+    "autoReleaseAssets": false
   },
   {
     "__type__": "cc.Node",
@@ -267,7 +267,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 199.52,
+      "width": 200,
       "height": 80
     },
     "_rotationX": 0,

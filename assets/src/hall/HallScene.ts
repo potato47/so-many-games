@@ -37,4 +37,8 @@ export class HallScene extends cc.Component {
         G.enterMine();
     }
 
+    onBtnLink() {
+        G.enterLink();
+    }
+
 }

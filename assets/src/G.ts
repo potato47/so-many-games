@@ -48,6 +48,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("mine");
     }
 
+    public enterLink() {
+        this.loadSceneWithProgress("link");
+    }
+
     private setLoadingDisplay() {
         if (cc.sys.isNative) {
             return;
