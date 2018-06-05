@@ -1,5 +1,5 @@
 window._CCSettings = {
-    platform: "web-mobile",
+    platform: "web-desktop",
     groupList: [
         "default"
     ],
@@ -186,6 +186,30 @@ window._CCSettings = {
                 "res/textures/number/Two.png",
                 0
             ],
+            "c59AfTZttOi6xkVyZLFOfZ": [
+                "res/textures/snake/bg.png",
+                0
+            ],
+            "e435cv+iZPUbq7jErsnq+d": [
+                "res/textures/snake/body_h.png",
+                0
+            ],
+            "cfIqBKtjRI56rHtHEkyMMD": [
+                "res/textures/snake/head.png",
+                0
+            ],
+            "b0oYFwKctGrrZAma2SjwlV": [
+                "res/textures/snake/joint.png",
+                0
+            ],
+            "7akf3Glu5Cyq7TSuQmYlJm": [
+                "res/textures/snake/shit.png",
+                0
+            ],
+            "7elht5SyJAFY60vdqtlXiv": [
+                "res/textures/snake/tail.png",
+                0
+            ],
             "e7bVLkieZANatUaOxb3GaB": [
                 "res/textures/square.png",
                 0
@@ -290,6 +314,10 @@ window._CCSettings = {
         {
             url: "db://assets/res/scenes/reversi.fire",
             uuid: 12
+        },
+        {
+            url: "db://assets/res/scenes/snake.fire",
+            uuid: 13
         },
         {
             url: "db://assets/res/scenes/tetris.fire",
@@ -491,6 +519,17 @@ window._CCSettings = {
             12,
             2,
             3
+        ],
+        "0d1e5c173": [
+            "33WS0BfqRGz7He9W+GQDq9",
+            "8chH7Wbo5AW4MWLxh0EenP",
+            13,
+            2,
+            "9b4aboItZKoZVkytp93RnA",
+            "b01s/kAx1JaraGaxnVDk1C",
+            "bftk17dBNF+7eWGX11rfuU",
+            "f12AEtHYBGoa7T5EhdB0jF",
+            "f90PKbgNVGIYJHCpPrXZ8s"
         ]
     },
     orientation: "portrait",
@@ -507,7 +546,8 @@ window._CCSettings = {
         "a2iLu4Y9xJX6NaE5Lmkt9T",
         "8acfqbljRHXK2shXdwXQRJ",
         "0dnG4Oh6tGRbZ3rrL5WUw/",
-        "06Xx+0McJFHpmNoJBf16Cv"
+        "06Xx+0McJFHpmNoJBf16Cv",
+        "90YUVOZYNCIJvG9LtyNi14"
     ],
     "md5AssetsMap": {
         "02/023dd699.json": "bea0a",
@@ -518,9 +558,10 @@ window._CCSettings = {
         "08/084ac5488.json": "d66f9",
         "08/0889b0b0b.json": "fb2ff",
         "09/090a99623.json": "1d6f1",
-        "0b/0b1bf8e52.json": "89d98",
+        "0b/0b1bf8e52.json": "8efc8",
         "0b/0b7146e97.json": "fbe57",
         "0c/0c49ae998.json": "35f13",
+        "0d/0d1e5c173.json": "4493b",
         "c6/c6e87de6-c9df-4ae7-b9db-3812d622863f.json": "14a51",
         "c6/c6e87de6-c9df-4ae7-b9db-3812d622863f/zhankukuaile.ttf": "0acea",
         "assets/res/textures/bg.jpg": "e7b3b",
@@ -567,6 +608,12 @@ window._CCSettings = {
         "assets/res/textures/number/Six.png": "dabf6",
         "assets/res/textures/number/Three.png": "da501",
         "assets/res/textures/number/Two.png": "377f8",
+        "assets/res/textures/snake/bg.png": "3e24f",
+        "assets/res/textures/snake/body_h.png": "d402e",
+        "assets/res/textures/snake/head.png": "6b0e5",
+        "assets/res/textures/snake/joint.png": "007d7",
+        "assets/res/textures/snake/shit.png": "c9e80",
+        "assets/res/textures/snake/tail.png": "43700",
         "assets/res/textures/square.png": "89d13",
         "assets/res/textures/streak_05_001.png": "64d59",
         "assets/res/textures/streak.png": "34961",

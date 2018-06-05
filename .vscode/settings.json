@@ -1,0 +1,30 @@
+{
+    "editor.fontSize": 22,
+    "terminal.integrated.fontSize": 16,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "library": true,
+        "local": true,
+        "settings": true,
+        "**/*.meta": true
+    },
+    "workbench.colorTheme": "One Dark Pro",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "prettier.singleQuote": false,
+    "prettier.semi": true,
+    "prettier.tabWidth": 4,
+    "prettier.eslintIntegration": true,
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatterOptions": {
+        "wrap_attributes": "force-aligned"
+    },
+    "window.zoomLevel": 0
+}
