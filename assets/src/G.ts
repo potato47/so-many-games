@@ -52,6 +52,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("link");
     }
 
+    public enterSnake() {
+        this.loadSceneWithProgress("snake");
+    }
+
     private setLoadingDisplay() {
         if (cc.sys.isNative) {
             return;
