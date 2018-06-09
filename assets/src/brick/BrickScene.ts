@@ -1,4 +1,7 @@
 import { BrickBall } from "./BrickBall";
+import { BrickPaddle } from "./BrickPaddle";
+import { BrickLayout } from "./BrickLayout";
+import { G } from "../G";
 
 const { ccclass, property } = cc._decorator;
 
@@ -7,14 +10,21 @@ export class BrickScene extends cc.Component {
 
     @property(BrickBall)
     private ball: BrickBall = null;
-
+    @property(BrickPaddle)
+    private paddle: BrickPaddle = null;
+    @property(BrickLayout)
+    private layout: BrickLayout = null;
+    @property(cc.Label)
+    private scoreLabel: cc.Label = null;
+    
+    private brickNum: number = 50;
+    private score = 0;
     private physicsManager: cc.PhysicsManager = null;
 
     onLoad() {
         this.physicsManager = cc.director.getPhysicsManager();
         this.startGame();
-
-    },
+    }
 
     //this.physicsManager.debugDrawFlags =0;
     // cc.PhysicsManager.DrawBits.e_aabbBit |
@@ -25,10 +35,13 @@ export class BrickScene extends cc.Component {
     // ; 
 
     init() {
+        this.score = 0;
+        this.scoreLabel.string = "0";
+        this.brickNum = 50;
         this.physicsManager.enabled = true;
         this.ball.init(this);
-        // this.paddle.init();
-        // this.brickLayout.init(this.gameModel.bricksNumber);
+        this.paddle.init();
+        this.layout.init(this.brickNum);
         // this.overPanel.init(this);
 
     }
@@ -47,17 +60,35 @@ export class BrickScene extends cc.Component {
 
     stopGame() {
         this.physicsManager.enabled = false;
-        // this.overPanel.show(this.gameModel.score, this.gameModel.bricksNumber === 0);
+        G.gameRoot.showMaskMessage("游戏结束",
+                {
+                    label: "再来一局", cb: () => {
+                        this.startGame();
+                    }, target: this
+                },
+                {
+                    label: "返回大厅", cb: () => {
+                        G.returnHall();
+                    }, target: this
+                });
+    }
+
+    addScore(score){
+        this.score += score;
+    }
+
+    minusBrick(n){
+        this.brickNum -= n;
     }
 
     onBallContactBrick(ballNode, brickNode) {
         brickNode.parent = null;
-        // this.gameModel.addScore(1);
-        // this.gameModel.minusBrick(1);
-        // this.gameView.updateScore(this.gameModel.score);
-        // if (this.gameModel.bricksNumber <= 0) {
-        //     this.stopGame();
-        // }
+        this.addScore(1);
+        this.minusBrick(1);
+        this.scoreLabel.string = this.score + "";
+        if (this.brickNum <= 0) {
+            this.stopGame();
+        }
     }
 
     onBallContactGround(ballNode: cc.Node, groundNode: cc.Node) {

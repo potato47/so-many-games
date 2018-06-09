@@ -45,4 +45,8 @@ export class HallScene extends cc.Component {
         G.enterSnake();
     }
 
+    onBtnBrick() {
+        G.enterBrick();
+    }
+
 }

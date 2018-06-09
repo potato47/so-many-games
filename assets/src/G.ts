@@ -56,6 +56,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("snake");
     }
 
+    public enterBrick() {
+        this.loadSceneWithProgress("brick");
+    }
+
     private setLoadingDisplay() {
         if (cc.sys.isNative) {
             return;
