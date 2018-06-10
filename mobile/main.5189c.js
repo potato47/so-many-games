@@ -1,7 +1,5 @@
 (function () {
 
-    'use strict';
-
     function boot () {
 
         var settings = window._CCSettings;
@@ -54,16 +52,13 @@
             canvas = document.getElementById('GameCanvas');
         }
 
-        if (cc.sys.platform === cc.sys.QQ_PLAY) {
-            if (settings.orientation === 'landscape left') {
-                BK.Director.screenMode = 2;
-            }
-            else if (settings.orientation === 'landscape right') {
-                BK.Director.screenMode = 3;
-            }
-            else if (settings.orientation === 'portrait') {
-                BK.Director.screenMode = 1;
-            }
+        if (false) {
+            var ORIENTATIONS = {
+                'portrait': 1,
+                'landscape left': 2,
+                'landscape right': 3
+            };
+            BK.Director.screenMode = ORIENTATIONS[settings.orientation];
             initAdapter();
         }
 
@@ -86,6 +81,10 @@
         }
 
         var onStart = function () {
+            if (false) {
+                BK.Script.loadlib();
+            }
+
             cc.view.resizeWithBrowserSize(true);
 
             if (!false && !false) {
@@ -111,7 +110,7 @@
                         cc.sys.BROWSER_TYPE_MIUI,
                     ].indexOf(cc.sys.browserType) < 0);
                 }
-                
+
                 // Limit downloading max concurrent task to 2,
                 // more tasks simultaneously may cause performance draw back on some android system / brwosers.
                 // You can adjust the number based on your own test result, you have to set it before any loading process to take effect.
@@ -128,6 +127,10 @@
                 packedAssets: settings.packedAssets,
                 md5AssetsMap: settings.md5AssetsMap
             });
+
+            if (false) {
+                cc.Pipeline.Downloader.PackDownloader._doPreload("WECHAT_SUBDOMAIN", settings.WECHAT_SUBDOMAIN_DATA);
+            }
 
             var launchScene = settings.launchScene;
 
@@ -150,20 +153,24 @@
 
         // jsList
         var jsList = settings.jsList;
-        var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.5cded.js';
-        if (jsList) {
-            jsList = jsList.map(function (x) { return 'src/' + x; });
-            jsList.push(bundledScript);
-        }
-        else {
-            jsList = [bundledScript];
+
+        if (!false) {
+            var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.c0499.js';
+            if (jsList) {
+                jsList = jsList.map(function (x) {
+                    return 'src/' + x;
+                });
+                jsList.push(bundledScript);
+            }
+            else {
+                jsList = [bundledScript];
+            }
         }
 
         // anysdk scripts
         if (cc.sys.isNative && cc.sys.isMobile) {
             jsList = jsList.concat(['src/anysdk/jsb_anysdk.js', 'src/anysdk/jsb_anysdk_constants.js']);
         }
-
 
         var option = {
             //width: width,
@@ -183,23 +190,20 @@
     }
 
     if (false) {
-        (function () {
-            var require = function (url) {
-                BK.Script.loadlib('GameRes://' + url);
-            };
-            require('libs/qqplay-adapter.js');
-            require('src/settings.1041a.js');
-            require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.dac82.js');
-            require('libs/qqplay-downloader.js');
-            var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
-            cc.loader.insertPipeAfter(prevPipe, qqPlayDownloader);
-            boot();
-        })();
+        BK.Script.loadlib('GameRes://libs/qqplay-adapter.js');
+        BK.Script.loadlib('GameRes://src/settings.js');
+        BK.Script.loadlib();
+        BK.Script.loadlib('GameRes://libs/qqplay-downloader.js');
+        qqPlayDownloader.REMOTE_SERVER_ROOT = "";
+        var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
+        cc.loader.insertPipeAfter(prevPipe, qqPlayDownloader);
+        // <plugin script code>
+        boot();
         return;
     }
 
     if (false) {
-        require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.dac82.js');
+        require(window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.6d908.js');
         var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
         cc.loader.insertPipeAfter(prevPipe, wxDownloader);
         boot();
@@ -207,7 +211,7 @@
     }
 
     if (window.jsb) {
-        require('src/settings.1041a.js');
+        require('src/settings.8fe6b.js');
         require('src/jsb_polyfill.js');
         boot();
         return;
@@ -219,7 +223,7 @@
 
         var cocos2d = document.createElement('script');
         cocos2d.async = true;
-        cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.dac82.js';
+        cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.6d908.js';
 
         var engineLoaded = function () {
             document.body.removeChild(cocos2d);
