@@ -49,4 +49,8 @@ export class HallScene extends cc.Component {
         G.enterBrick();
     }
 
+    onPinball() {
+        G.enterPinball();
+    }
+
 }

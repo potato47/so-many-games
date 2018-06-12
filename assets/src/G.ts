@@ -60,6 +60,10 @@ class GlobalInstance {
         this.loadSceneWithProgress("brick");
     }
 
+    public enterPinball() {
+        this.loadSceneWithProgress("pinball");
+    }
+
     private setLoadingDisplay() {
         if (cc.sys.isNative) {
             return;
