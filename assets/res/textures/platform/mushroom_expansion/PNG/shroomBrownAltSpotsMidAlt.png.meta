@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "9f233ce3-7fc8-4298-98d7-8f3e36638a02",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "shroomBrownAltSpotsMidAlt": {
       "ver": "1.0.3",

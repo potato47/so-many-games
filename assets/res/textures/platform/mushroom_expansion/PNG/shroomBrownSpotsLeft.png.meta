@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "b51d5b7f-51ed-4ce7-af9d-a7c70e6df0a1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "shroomBrownSpotsLeft": {
       "ver": "1.0.3",

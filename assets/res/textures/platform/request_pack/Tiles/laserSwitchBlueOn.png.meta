@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "c56e6cbb-7fb1-4300-ab6f-0d9a1e4dcd0c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "laserSwitchBlueOn": {
       "ver": "1.0.3",

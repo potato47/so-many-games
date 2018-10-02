@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "04167c14-5d8f-47ea-b097-4e3c5c5e8b42",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "iceWaterMidAlt": {
       "ver": "1.0.3",

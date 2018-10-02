@@ -65,8 +65,8 @@ export class Get47Scene extends cc.Component {
     }
 
     private addListeners() {
-        (cc as any).inputManager.setAccelerometerEnabled(true);
-        cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
+        // (cc as any).inputManager.setAccelerometerEnabled(true);
+        // cc.systemEvent.on(cc.SystemEvent.EventType.DEVICEMOTION, this.onDeviceMotionEvent, this);
     }
 
     private removeListeners() {
@@ -74,9 +74,9 @@ export class Get47Scene extends cc.Component {
     }
 
     private onDeviceMotionEvent(event) {
-        if (Math.abs(event.acc.x) > 0.3 && Math.abs(event.acc.y) > 0.3) {
-            this.board.newView();
-        }
+        // if (Math.abs(event.acc.x) > 0.3 && Math.abs(event.acc.y) > 0.3) {
+        //     this.board.newView();
+        // }
         // 一个失败的创意
         // if(event.acc.x > 0.5){
         //     this.board.newView(1);

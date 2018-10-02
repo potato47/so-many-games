@@ -41,7 +41,7 @@ export class Get47Board extends cc.Component {
                 this.node.addChild(pieceNode);
                 pieceNode.width = this.pieceWidth;
                 pieceNode.height = this.pieceWidth;
-                pieceNode.position = cc.p(this.padding + x * (this.pieceWidth + this.spacing),
+                pieceNode.position = cc.v2(this.padding + x * (this.pieceWidth + this.spacing),
                     this.padding + y * (this.pieceWidth + this.spacing));
                 let piece = pieceNode.getComponent(Piece);
                 piece.init(x, y);

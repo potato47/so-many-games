@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "eac4ea40-7137-44a3-bc7f-8e705b6deb33",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "iceWaterDeepStarsAlt": {
       "ver": "1.0.3",

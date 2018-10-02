@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "22a7bb2d-e5cb-4b6e-a3c0-9077e83e8e17",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "laserGreenHorizontal": {
       "ver": "1.0.3",

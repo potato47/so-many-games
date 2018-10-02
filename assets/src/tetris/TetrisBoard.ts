@@ -31,7 +31,7 @@ export class Board extends cc.Component {
     onLoad() {
         this.gridWidth = this.node.width / this.colsNum;
         // this.rowsNum = this.node.height / this.gridWidth | 0;
-        this.rowsNum = cc.director.getVisibleSize().height / this.gridWidth | 0;
+        this.rowsNum = cc.winSize.height / this.gridWidth | 0;
         this.pieceMap = [];
         for (let y = 0; y < this.rowsNum; y++) {
             this.pieceMap[y] = [];
@@ -197,10 +197,10 @@ export class Board extends cc.Component {
             for (let x = 0; x < y; x++) {
                 [
                     matrix[x][y],
-                    matrix[y][x],
+                    matrix[y][x]
                 ] = [
                         matrix[y][x],
-                        matrix[x][y],
+                        matrix[x][y]
                     ];
             }
         }

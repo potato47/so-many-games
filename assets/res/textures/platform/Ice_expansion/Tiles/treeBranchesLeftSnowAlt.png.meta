@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "a6d0012a-1fa5-46d3-a63e-f6617c1d7107",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "treeBranchesLeftSnowAlt": {
       "ver": "1.0.3",

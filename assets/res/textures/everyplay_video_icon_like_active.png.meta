@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "3b9f6a38-92d2-4c48-bbdf-9da7688b3ba8",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "everyplay_video_icon_like_active": {
       "ver": "1.0.3",

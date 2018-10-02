@@ -6,7 +6,6 @@ export class Timer extends cc.Component {
     @property(cc.Label)
     private timerLabel: cc.Label = null;
     
-    private isRunning = false;
     public time:number = null;
 
     public run() {

@@ -4,7 +4,7 @@ import { GameRoot } from "../shared/GameRoot";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export class LodingScene extends cc.Component {
+export class LoadingScene extends cc.Component {
     
     @property(cc.Label)
     private tipLabel: cc.Label = null;
@@ -12,6 +12,7 @@ export class LodingScene extends cc.Component {
     private gameRoot:cc.Node = null;
 
     onLoad() {
+        G.setResolutionPolicy();
         cc.game.addPersistRootNode(this.gameRoot);
         this.initGlobal();
     }
@@ -21,7 +22,7 @@ export class LodingScene extends cc.Component {
     }
 
     protected start() {
-        cc.director.setDisplayStats(false);
+        // cc.director.setDisplayStats(false);
         let tip = "始终相信美好的事情不会发生"
         let i = 0;
         this.tipLabel.string = '';

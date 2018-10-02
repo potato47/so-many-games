@@ -1,9 +1,10 @@
 {
-  "ver": "1.0.0",
+  "ver": "2.2.0",
   "uuid": "edc0ebc1-4b51-45a7-97a2-cdb28ff35350",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
+  "premultiplyAlpha": false,
   "subMetas": {
     "spinnerHalf_dead": {
       "ver": "1.0.3",

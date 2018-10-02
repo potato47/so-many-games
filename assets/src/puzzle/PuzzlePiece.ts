@@ -3,7 +3,9 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export class Piece extends cc.Component {
 
-    @property(cc.Texture2D)
+    @property({
+        type: cc.Texture2D
+    })
     private texture: cc.Texture2D = null;
 
     public oriCol: number;
@@ -22,14 +24,17 @@ export class Piece extends cc.Component {
         this.curRow = row;
 
         let sprite = this.node.addComponent(cc.Sprite);
-        sprite.spriteFrame = new cc.SpriteFrame(this.texture);
-        let rect = sprite.spriteFrame.getRect();
+        // 升级2.0后setRect失效 
+        // sprite.spriteFrame = new cc.SpriteFrame(this.texture);
+        // let rect = sprite.spriteFrame.getRect();
+        let rect = cc.rect(0, 0, this.texture.width, this.texture.height);
         let newRectWidth = rect.width / colNum;
         let newRectHeight = rect.height / colNum;
         let newRectX = col * newRectWidth;
         let newRectY = (colNum - row - 1) * newRectHeight;
         let newRect = cc.rect(newRectX, newRectY, newRectWidth, newRectHeight);
-        sprite.spriteFrame.setRect(newRect);
+        // sprite.spriteFrame.setRect(newRect);
+        sprite.spriteFrame = new cc.SpriteFrame(this.texture, newRect);
 
         this.node.width = colWidth;
         this.node.height = colWidth;

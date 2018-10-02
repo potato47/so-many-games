@@ -23,59 +23,59 @@ export class M2048Piece extends cc.Component {
                 break;
             case 2:
                 str = "幼儿园";
-                color = cc.hexToColor("#784212");
+                color = new cc.Color().fromHEX("#784212");
                 break;
             case 4:
                 str = "小学生";
-                color = cc.hexToColor("#784212");
+                color = new cc.Color().fromHEX("#784212");
                 break;
             case 8:
                 str = "初中生";
-                color = cc.hexToColor("#7E5109");
+                color = new cc.Color().fromHEX("#7E5109");
                 break;
             case 16:
                 str = "高中生";
-                color = cc.hexToColor("#7D6608");
+                color = new cc.Color().fromHEX("#7D6608");
                 break;
             case 32:
                 str = "大学生";
-                color = cc.hexToColor("#186A3B");
+                color = new cc.Color().fromHEX("#186A3B");
                 break;
             case 64:
                 str = "研究生";
-                color = cc.hexToColor("#145A32");
+                color = new cc.Color().fromHEX("#145A32");
                 break;
             case 128:
                 str = "硕士生";
-                color = cc.hexToColor("#0B5345");
+                color = new cc.Color().fromHEX("#0B5345");
                 break;
             case 256:
                 str = "博士生";
-                color = cc.hexToColor("#0E6251");
+                color = new cc.Color().fromHEX("#0E6251");
                 break;
             case 512:
                 str = "实习生";
-                color = cc.hexToColor("#1B4F72");
+                color = new cc.Color().fromHEX("#1B4F72");
                 break;
             case 1024:
                 str = "码农";
-                color = cc.hexToColor("#154360");
+                color = new cc.Color().fromHEX("#154360");
                 break;
             case 2048:
                 str = "码神";
-                color = cc.hexToColor("#4A235A");
+                color = new cc.Color().fromHEX("#4A235A");
                 break;
             case 4096:
                 str = "女装大佬";
-                color = cc.hexToColor("#512E5F");
+                color = new cc.Color().fromHEX("#512E5F");
                 break;
             case 8192:
                 str = "众生平等";
-                color = cc.hexToColor("#78281F");
+                color = new cc.Color().fromHEX("#78281F");
                 break;
             default:
                 str = "开挂吧你";
-                color = cc.hexToColor("#641E16");
+                color = new cc.Color().fromHEX("#641E16");
                 break;
         }
         this.nLabel.string = str;

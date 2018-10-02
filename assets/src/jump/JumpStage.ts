@@ -74,9 +74,9 @@ export class Stage extends cc.Component {
         }, 10);
         this.scheduleOnce(() => {
             this.player.node.children.forEach((child) => {
-                child.color = cc.hexToColor("#58D639");
+                child.color = new cc.Color().fromHEX("#58D639");
                 let streak = this.player.getComponent(cc.MotionStreak);
-                streak.color = cc.hexToColor("#58D639");
+                streak.color = new cc.Color().fromHEX("#58D639")
             });
         }, 15);
         this.scheduleOnce(() => {
