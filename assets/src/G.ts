@@ -82,7 +82,6 @@ class GlobalInstance {
 
         cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
             splash.style.display = 'none';
-            
         });
     }
 
@@ -96,7 +95,7 @@ class GlobalInstance {
     }
 
     public setResolutionPolicy() {
-        let f = function() {
+        let f = function () {
             if (cc.sys.isMobile) {
                 cc.log('手机场景适配');
                 cc.view.setDesignResolutionSize(720, 1280, cc.ResolutionPolicy.FIXED_WIDTH);
@@ -108,7 +107,7 @@ class GlobalInstance {
             }
         }
         f();
-        cc.director.on(cc.Director.EVENT_AFTER_SCENE_LAUNCH, f);
+        cc.director.on(cc.Director.EVENT_BEFORE_SCENE_LOADING, f);
     }
 }
 

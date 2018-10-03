@@ -19,10 +19,10 @@
   <link rel="stylesheet" type="text/css" href="style-desktop.css"/>
 </head>
 <body>
-<h1 class="header">微信关注:新手程序员</h1>
+  <h1 class="header">微信关注:新手程序员</h1>
 
-<div id="GameDiv" style="width:<%=previewWidth%>px; height: <%=previewHeight%>px;">
-  <canvas id="GameCanvas" width="<%=previewWidth%>" height="<%=previewHeight%>"></canvas>
+<div id="GameDiv" style="width:360px; height: 640px;">
+  <canvas id="GameCanvas" width="360" height="640"></canvas>
   <div id="splash">
     <div class="progress-bar stripes">
       <span style="width: 0%"></span>
@@ -34,5 +34,30 @@
 
 <script src="src/settings.js" charset="utf-8"></script>
 <script src="main.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+(function () {
+    // open web debugger console
+    if (typeof VConsole !== 'undefined') {
+        window.vConsole = new VConsole();
+    }
+
+    var splash = document.getElementById('splash');
+    splash.style.display = 'block';
+
+    var cocos2d = document.createElement('script');
+    cocos2d.async = true;
+    cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
+
+    var engineLoaded = function () {
+        document.body.removeChild(cocos2d);
+        cocos2d.removeEventListener('load', engineLoaded, false);
+        window.boot();
+    };
+    cocos2d.addEventListener('load', engineLoaded, false);
+    document.body.appendChild(cocos2d);
+})();
+</script>
+
 </body>
 </html>
